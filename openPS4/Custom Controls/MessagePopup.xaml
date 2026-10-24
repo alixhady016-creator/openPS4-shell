@@ -1,0 +1,17 @@
+<UserControl x:Class="MessagePopup"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:openPS4"
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="535" Width="535" Height="100">
+    <UserControl.Effect>
+        <DropShadowEffect RenderingBias="Quality"/>
+    </UserControl.Effect>
+    <Canvas x:Name="PopupCanvas" Background="White" Height="100" Width="535">
+        <Label x:Name="PopupTitle" Content="" Height="48" Width="330" FontFamily="SST Light" Foreground="Black" FontSize="30" VerticalContentAlignment="Center" Padding="0" Background="{x:Null}" HorizontalAlignment="Left" Canvas.Left="185" Canvas.Top="8" VerticalAlignment="Top"/>
+        <Label x:Name="PopupDetail" Content="" Height="48" Width="330" FontFamily="SST Light" Foreground="#FF6B6B6B" FontSize="26" VerticalContentAlignment="Center" Padding="0" Background="{x:Null}" HorizontalAlignment="Left" Canvas.Left="185" Canvas.Top="45" VerticalAlignment="Top"/>
+        <Image x:Name="PopupImage" Width="64" Height="64" HorizontalAlignment="Left" Canvas.Left="101" Canvas.Top="18" VerticalAlignment="Center"/>
+    </Canvas>
+</UserControl>

@@ -1,0 +1,18 @@
+Sce.PlayStation.PUI.UI2.FrameScene+FooterDisplayController::get_AutoHideTimer
+Token 0x06002477
+0001 ldarg.0        
+0002 ldfld          Sce.PlayStation.PUI.UI2.FrameScene+FooterDisplayController::autoHideTimer [0x04001783]
+0007 brtrue.s       48
+0009 ldarg.0        
+000A ldarg.0        
+000B ldfld          Sce.PlayStation.PUI.UI2.FrameScene+FooterDisplayController::frameScene [0x0400177A]
+0010 ldfld          Sce.PlayStation.PUI.UI2.FrameScene::footerPanel [0x04001770]
+0015 ldc.r4         9.0
+001A ldarg.0        
+001B ldftn          Sce.PlayStation.PUI.UI2.FrameScene+FooterDisplayController::<get_AutoHideTimer>b__38_0 [0x0600247A]
+0021 newobj         Sce.PlayStation.PUI.UITimer+ExecutedHandler::.ctor [0x060010C2]
+0026 newobj         Sce.PlayStation.PUI.UI2.FrameScene+WaitKeyNavigationAnimationTimer::.ctor [0x0600247B]
+002B stfld          Sce.PlayStation.PUI.UI2.FrameScene+FooterDisplayController::autoHideTimer [0x04001783]
+0030 ldarg.0        
+0031 ldfld          Sce.PlayStation.PUI.UI2.FrameScene+FooterDisplayController::autoHideTimer [0x04001783]
+0036 ret            

@@ -1,0 +1,35 @@
+.localSetupHeading{position:absolute;left:290px;top:180px;width:1340px;color:white;font:300 28px PS4Footer,sans-serif;z-index:3}.localSetupHeading h2{font:inherit;margin:0 0 12px}.localSetupHeading p{font-size:26px;margin:0;max-width:1260px}.localProfilesWizard .interfaceListViewport{top:310px;height:510px}.localProfilesAvatars .interfaceListContent,.localProfilesEditing .interfaceListContent{visibility:hidden}.localProfilesAvatars .interfaceListContent canvas{visibility:visible}.localAvatarGrid{position:absolute;inset:0;color:white}.localAvatarCategories{position:absolute;left:290px;top:290px;width:370px;height:570px;border-right:1px solid rgba(255,255,255,.45);font:300 30px PS4Footer,sans-serif}.localAvatarChoice{position:absolute;width:128px;height:128px;background:none;border:0;padding:4px}.localAvatarChoice img{width:120px;height:120px;border-radius:50%;object-fit:cover}.localAvatarChoice:focus{outline:2px solid white;outline-offset:0}.localSetupNameForm{position:absolute;inset:0;color:white;font:300 30px PS4Footer,sans-serif}.localSetupSelectedAvatar{position:absolute;left:290px;top:350px;width:290px;height:290px;background:none;border:0}.localSetupSelectedAvatar img{width:100%;height:100%;border-radius:50%}.localSetupNameForm label{position:absolute;left:650px;top:350px;width:780px}.localSetupNameForm input{display:block;box-sizing:border-box;width:780px;height:70px;margin-top:15px;padding:10px 18px;background:rgba(0,0,0,.15);color:white;border:1px solid #abc;font:inherit}.localSetupNext{position:absolute;left:740px;top:820px;width:440px;height:70px;background:rgba(0,0,0,.1);color:white;border:1px solid #abc;font:inherit}.localSetupNameForm button:focus-visible,.localSetupNameForm input:focus-visible{outline:2px solid white;outline-offset:3px}.localProfilesNotice{position:absolute;left:290px;bottom:120px;max-width:1340px;font:300 26px PS4Footer,sans-serif;color:white;z-index:4}.localPrivacySummary .interfaceListViewport{top:600px}
+
+/* Avatar-grid anchors rectified from the supplied filmed display. */
+.localAvatarCategories{left:240px;top:290px;width:463px}.localAvatarChoice{width:144px;height:144px}.localAvatarChoice img{width:136px;height:136px}.localAvatarChoice:focus{outline:none}.localProfilesAvatars .localSetupHeading{left:240px;width:1440px;padding-bottom:36px;border-bottom:2px solid rgba(255,255,255,.2)}
+
+.localAvatarCategory{position:absolute;left:290px;width:380px;height:70px;border:0;background:none;color:white;font:300 28px PS4Footer,sans-serif;text-align:left;padding-left:16px}.localAvatarUnavailable{position:absolute;left:720px;top:350px;width:850px;font:300 28px PS4Footer,sans-serif}.localAvatarCategory:focus{outline:none}.localAvatarChoice:focus{outline:none}
+.localAvatarGrid,.localSetupNameForm,.localSetupHeading{visibility:visible}
+
+.localAvatarCategory{left:240px;width:463px}
+
+/* Structure observed in native enrollment footage; positions are rectified inference. */
+.localAvatarCurrent{position:absolute;left:1588px;top:186px;width:70px;height:70px;pointer-events:none}
+.localAvatarCurrent>img:first-child{width:70px;height:70px;object-fit:contain}
+.localAvatarCurrentCheck{position:absolute;right:-12px;top:-12px;width:24px;height:24px}
+.localAvatarDivider{position:absolute;left:703px;top:290px;width:2px;height:630px;background:rgba(255,255,255,.45)}
+.localAvatarScroll{position:absolute;left:1718px;top:299px;width:3px;height:624px;background:rgba(255,255,255,.15)}
+.localAvatarScroll i{position:absolute;left:0;width:3px;background:rgba(255,255,255,.7)}
+
+.localAvatarGrid{touch-action:none}
+
+.localUserType .interfaceListHeader,.localUserType .interfaceListBadge,.localUserType .interfaceListViewport{visibility:hidden}.localUserTypeRoot{position:absolute;inset:0;color:rgba(255,255,255,.8);font:300 26px PS4Footer,sans-serif}.localUserTypeLogo{position:absolute;left:110px;top:59px;width:477px}.localUserTypeChoice{position:absolute;left:300px;width:1320px;height:180px;text-align:left;border:0;background:none;color:inherit;padding:0;font:inherit}.localUserTypeChoice:focus{outline:none}.localUserTypeChoice>img{position:absolute;left:0;top:0;width:180px;height:180px}.localUserTypeChoice h2{position:absolute;left:199px;top:8px;margin:0;font:300 33px PS4Footer,sans-serif}.localUserTypeChoice p{position:absolute;left:199px;top:55px;margin:0;white-space:pre-line;line-height:36px}.localUserTypeNote{position:absolute;left:300px;top:740px;white-space:pre-line;margin:0;line-height:36px}.localAvatarCategory{opacity:.5}.localAvatarCategory.selected,.localAvatarCategory.focused{opacity:1;background:none;border:0;padding-left:16px}.localAvatarCategory:first-child:after{content:'';position:absolute;left:0;right:0;bottom:-4px;height:1px;background:rgba(255,255,255,.2)}
+
+.localUserTypeChoice p{font-size:24px}.localUserTypeChoice:nth-of-type(2):after{content:'';position:absolute;left:190px;right:0;bottom:-10px;height:1px;background:rgba(255,255,255,.2)}
+
+/* Follow-up calibration from the supplied avatar frame and user feedback. */
+.enrollmentHeaderProgress{position:absolute;left:1580px;top:88px;width:180px;height:4px;background:rgba(38,174,242,.24);pointer-events:none;z-index:7}.enrollmentHeaderProgress i{display:block;height:4px;background:rgba(235,250,255,.9);transition:width 250ms}
+.localProfilesAvatars .localSetupHeading{top:195px;padding-bottom:27px}.localAvatarCurrent{left:1600px;top:180px;width:60px;height:60px}.localAvatarCurrent>img:first-child{width:60px;height:60px}.localAvatarCurrentCheck{width:28px;height:28px;right:-17px;top:-19px}.localAvatarCategory{width:440px;padding-left:0}.localAvatarCategory.selected,.localAvatarCategory.focused{padding-left:0}.localAvatarCategory:first-child:after{bottom:-5px}.localAvatarDivider{display:none}.localAvatarCategoryScroll{position:absolute;left:703px;top:280px;width:3px;height:630px;background:transparent;pointer-events:none}.localAvatarCategoryScroll i{position:absolute;left:0;top:0;width:3px;height:320px;background:rgba(255,255,255,.65)}.localAvatarScroll{top:280px}.localAvatarChoice{padding:0}.localAvatarChoice img{width:144px;height:144px;object-fit:contain}.localUserTypeChoice:focus-visible{outline:none}
+
+.localProfilesAvatars .localSetupHeading{top:185px;padding-bottom:17px}
+
+.localAvatarCurrent>img:first-child{position:absolute;width:83.42px;height:83.42px;left:-11.87px;top:-11.55px}.localAvatarCurrentCheck{width:32px;height:32px;right:-20px;top:-23px}
+
+.localAvatarCategory,.localAvatarCategory.selected,.localAvatarCategory.focused{padding-left:16px;font-size:28px;line-height:70px}.localAvatarCurrent{transform:scale(.85);transform-origin:right top}
+
+.localAvatarCategory{left:224px;width:463px}.localAvatarCategory:first-child:after{left:16px;right:16px}

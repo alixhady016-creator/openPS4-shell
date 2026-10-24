@@ -1,0 +1,198 @@
+[
+  {
+    "file": "friends.png",
+    "source": "C:\\Users\\AlixHady\\Documents\\Codex\\2026-10-10\\ple\\outputs\\PS4-original-6x-assets\\PNG-conversions\\Sce.Vsh.ShellUI.Theme\\tex_friend_src_4k.png",
+    "sha256": "ea6fda497cb70a115896e232f1911be321718429186ee0ba18cad9a3d483f917"
+  },
+  {
+    "file": "notifications.png",
+    "source": "C:\\Users\\AlixHady\\Documents\\Codex\\2026-10-10\\ple\\outputs\\PS4-original-6x-assets\\PNG-conversions\\Sce.Vsh.ShellUI.Theme\\tex_notification_src_4k.png",
+    "sha256": "ab47542ad68962115560add2682f27892a91703a299e40a99022d66e81837cff"
+  },
+  {
+    "file": "messages.png",
+    "source": "C:\\Users\\AlixHady\\Documents\\Codex\\2026-10-10\\ple\\outputs\\PS4-original-6x-assets\\PNG-conversions\\Sce.Vsh.ShellUI.Theme\\tex_message_src_4k.png",
+    "sha256": "06bd92b4b2db5725dc03c159a8400daaa289415ba998a449343830b33617d9d7"
+  },
+  {
+    "file": "party.png",
+    "source": "C:\\Users\\AlixHady\\Documents\\Codex\\2026-10-10\\ple\\outputs\\PS4-original-6x-assets\\PNG-conversions\\Sce.Vsh.ShellUI.Theme\\tex_party_src_4k.png",
+    "sha256": "616ff986d7fae1fbc462464626e153a7fd00d339c126bdb206f270ab24460fdc"
+  },
+  {
+    "file": "trophies.png",
+    "source": "C:\\Users\\AlixHady\\Documents\\Codex\\2026-10-10\\ple\\outputs\\PS4-original-6x-assets\\PNG-conversions\\Sce.Vsh.ShellUI.Theme\\tex_trophy_src_4k.png",
+    "sha256": "168b705e736b1b4b0d6a3067cc6c9ff2d33f804bf965d54655cd858853f938f6"
+  },
+  {
+    "file": "settings.png",
+    "source": "C:\\Users\\AlixHady\\Documents\\Codex\\2026-10-10\\ple\\outputs\\PS4-original-6x-assets\\PNG-conversions\\Sce.Vsh.ShellUI.Theme\\tex_setting_src_4k.png",
+    "sha256": "c8270549d1369df5f20e41e0aefcaf5ebb8e0c688c4f176e8fe4455d7f875403"
+  },
+  {
+    "file": "power.png",
+    "source": "C:\\Users\\AlixHady\\Documents\\Codex\\2026-10-10\\ple\\outputs\\PS4-original-6x-assets\\PNG-conversions\\Sce.Vsh.ShellUI.Theme\\tex_power_src_4k.png",
+    "sha256": "63bde06f356517e167cf5f8591076b5cbda29380c717d21bb96ac69e3599e679"
+  },
+  {
+    "file": "communities.png",
+    "source": "C:\\Users\\AlixHady\\Documents\\Codex\\2026-10-10\\ple\\outputs\\PS4-original-6x-assets\\PNG-conversions\\Sce.Vsh.ShellUI.Theme\\tex_community_src_4k.png",
+    "sha256": "c502d19edc12b5ff3d19756040a08574acd73816c6ae64b8638d1d4f4255f822"
+  },
+  {
+    "file": "plus.png",
+    "source": "C:\\Users\\AlixHady\\Documents\\Codex\\2026-10-10\\ple\\outputs\\PS4-original-6x-assets\\PNG-conversions\\Sce.Vsh.ShellUI.TopMenu\\tex_plus_src_4k.png",
+    "sha256": "668be00a58868f569ef7e01dda4559713eb03dcc03504db2a53c121046fef95e"
+  },
+  {
+    "file": "loading.png",
+    "source": "C:\\Users\\AlixHady\\Documents\\Codex\\2026-10-10\\ple\\outputs\\PS4-original-6x-assets\\PNG-conversions\\Sce.Vsh.ShellUI.Base\\tex_default_loading_src.png",
+    "sha256": "d55a818c46567f539adfa4094244a2819617eafdc80c77d7c7f1f3e41cf6019a"
+  },
+  {
+    "file": "symbols.png",
+    "source": "C:\\Users\\AlixHady\\Documents\\Codex\\2026-10-10\\ple\\outputs\\PS4-original-6x-assets\\extracted\\Sce.PlayStation.PUI\\image_busyindicator_src_4k.png",
+    "sha256": "c8942e759934b3efc4f6620b67be3edc09c5ab594fea69722a1845b87fad131b"
+  },
+  {
+    "file": "psbutton.png",
+    "source": "C:\\Users\\AlixHady\\Documents\\Codex\\2026-10-10\\ple\\outputs\\PS4-original-6x-assets\\PNG-conversions\\Sce.Vsh.ShellUI.Notification\\tex_ps_button_src.png",
+    "sha256": "51a0de49a04541a1e5b04eb60cc1e9e6f1f3f74113229a75f4d8713fa1e02ef3"
+  },
+  {
+    "file": "ps4logo.png",
+    "source": "C:\\Users\\AlixHady\\Documents\\Codex\\2026-10-10\\ple\\outputs\\PS4-original-6x-assets\\extracted\\Sce.Vsh.ShellUI.LoginMgr\\tex_icon_logo_src.png",
+    "sha256": "a953a73e7dba4dbf2e29d4c9feb7c32e3abf3acab6e89d324cfe3e25940bba25"
+  },
+  {
+    "file": "newuser.png",
+    "source": "C:\\Users\\AlixHady\\Documents\\Codex\\2026-10-10\\ple\\outputs\\PS4-original-6x-assets\\extracted\\Sce.Vsh.ShellUI.LoginMgr\\tex_new_user_src.png",
+    "sha256": "4270ead321da035ef18f5d776c7fb86ecb0a70c68246e68b3e4c1ea3a62b3842"
+  },
+  {
+    "file": "events.png",
+    "source": "C:\\Users\\AlixHady\\Documents\\Codex\\2026-10-10\\ple\\outputs\\PS4-original-6x-assets\\PNG-conversions\\Sce.Vsh.ShellUI.Theme\\tex_event_src_4k.png",
+    "sha256": "4740853bf0eebc7316976d4fc90bf2d1dd0b8016fac4724665205263a3d7276e"
+  },
+  {
+    "file": "music.png",
+    "source": "C:\\Users\\AlixHady\\Documents\\Codex\\2026-10-10\\ple\\openPS4-PS4\\openPS4\\Icons\\Music.png",
+    "sha256": "234a0cdf62ca9d4dfe24539d38c491eea39ae8e3d7d8a3155f4dba54d63ca8d1"
+  },
+  {
+    "file": "profile.png",
+    "source": "C:\\Users\\AlixHady\\Documents\\Codex\\2026-10-10\\ple\\outputs\\PS4-original-6x-assets\\PNG-conversions\\Sce.Vsh.ShellUI.Notification\\tex_default_avatar_src_4k.png",
+    "sha256": "75505a394342c7bf91cb8c356e1b334189d2cc4f88bc4c44d59d516334a8d00d"
+  },
+  {
+    "file": "main.mp3",
+    "source": "C:\\Users\\AlixHady\\Downloads\\01 Main.mp3",
+    "sha256": "01e89a601c92bda482378ce2c890e91f4b99280aff39d8d844bc1dceb658db92"
+  },
+  {
+    "file": "login.mp3",
+    "source": "C:\\Users\\AlixHady\\Downloads\\02 Login.mp3",
+    "sha256": "8176108377836833252e3426e2c06e4615bf91321104e26f5b439956ec27ac5d"
+  },
+  {
+    "file": "move.wav",
+    "source": "PS4-System-Software-Sounds.zip/src7-Cursol_refine_C-.wav",
+    "sha256": "c6adc2594330793916af7abde7e68704e74714b5cc8dc0684f56913082a01df5"
+  },
+  {
+    "file": "login.wav",
+    "source": "PS4-System-Software-Sounds.zip/src20-se_log_login.wav",
+    "sha256": "bf42583bc6040ef44024a3c25ad42901269365e065168e329c0a95890e101789"
+  },
+  {
+    "file": "up.wav",
+    "source": "PS4-System-Software-Sounds.zip/src16-se_enter_menu.wav",
+    "sha256": "654729adc21b37fb107ee863c9e3ec9ad8e7153e8c9cdbf06b7ef701023e12d5"
+  },
+  {
+    "file": "main.wav",
+    "source": "outputs/PS4-original-6x-assets/systembgm/bgm_main.at9",
+    "source_sha256": "4636c31b1780d8446a15fe6a275a640b293618184319b90f8205208f2916b4cc",
+    "conversion": "ATRAC9 to stereo 48000 Hz PCM, no EQ or resynthesis",
+    "sha256": "ec7549b07379818be426bb9943ea614aa2ebefb9641aa0297f4f030d50b3bc1d"
+  },
+  {
+    "file": "whatsnew.png",
+    "source": "C:\\Users\\AlixHady\\Documents\\Codex\\2026-10-10\\ple\\outputs\\PS4-original-6x-assets\\PNG-conversions\\Sce.Vsh.ShellUI.VoiceRecognitionTutorial\\tex_NUI_tutorial_appIcon_whatsNew_src.png",
+    "sha256": "93826190c4e0f68bf2d3237db324745c1eb37546cc67356f02bfa89fdaec4012",
+    "note": "Extracted resource; tutorial app icons are references, not verified dashboard textures."
+  },
+  {
+    "file": "down.png",
+    "source": "C:\\Users\\AlixHady\\Documents\\Codex\\2026-10-10\\ple\\outputs\\PS4-original-6x-assets\\extracted\\Sce.Vsh.ShellUI.TopMenu\\tex_arrow_down_src_4k.png",
+    "sha256": "cade8d6e33d67eb93135d1f5d6b6c9fa1deee55131ffdb6d1c76e338d5527f1c",
+    "note": "Extracted resource; tutorial app icons are references, not verified dashboard textures."
+  },
+  {
+    "file": "library.png",
+    "source": "C:\\Users\\AlixHady\\Documents\\Codex\\2026-10-10\\ple\\outputs\\PS4-original-6x-assets\\PNG-conversions\\Sce.Vsh.ShellUI.VoiceRecognitionTutorial\\tex_NUI_tutorial_appIcon_library_src_4k.png",
+    "sha256": "dc0d5c4018c8456663553514ea06e29e54a5a0c7a5c44b27c0941e310cfc3bb9",
+    "note": "Extracted resource; tutorial app icons are references, not verified dashboard textures."
+  },
+  {
+    "file": "browser.png",
+    "source": "C:\\Users\\AlixHady\\Documents\\Codex\\2026-10-10\\ple\\outputs\\PS4-original-6x-assets\\PNG-conversions\\Sce.Vsh.ShellUI.VoiceRecognitionTutorial\\tex_NUI_tutorial_appIcon_browser_src_4k.png",
+    "sha256": "e1325eca90efed22f0bfd6060c7e1959f63f25c367e77925e2cb30d9dc65cd5d",
+    "note": "Extracted resource; tutorial app icons are references, not verified dashboard textures."
+  },
+  {
+    "file": "gallery.png",
+    "source": "C:\\Users\\AlixHady\\Documents\\Codex\\2026-10-10\\ple\\outputs\\PS4-original-6x-assets\\PNG-conversions\\Sce.Vsh.ShellUI.VoiceRecognitionTutorial\\tex_NUI_tutorial_appIcon_capture_gallery_src_4k.png",
+    "sha256": "ac738b7548127297430116c1f4b422226a39335066257660cd08fd56ffa0caed",
+    "note": "Extracted resource; tutorial app icons are references, not verified dashboard textures."
+  },
+  {
+    "file": "L1.png",
+    "source": "C:\\Users\\AlixHady\\Documents\\Codex\\2026-10-10\\ple\\outputs\\PS4-original-6x-assets\\extracted\\Sce.PlayStation.PUI\\emoji_L1_src_4k.png",
+    "sha256": "aa68b961a056903b75ef90d1b3090a6f75e57c47c2ee50afebbf0cd76d351eef",
+    "note": "Extracted resource; tutorial app icons are references, not verified dashboard textures."
+  },
+  {
+    "file": "R1.png",
+    "source": "C:\\Users\\AlixHady\\Documents\\Codex\\2026-10-10\\ple\\outputs\\PS4-original-6x-assets\\extracted\\Sce.PlayStation.PUI\\emoji_R1_src_4k.png",
+    "sha256": "16a1c533d5d5740550f9cb8df1b332a3e5d9542809c6f458cb91774011ad7d50",
+    "note": "Extracted resource; tutorial app icons are references, not verified dashboard textures."
+  },
+  {
+    "file": "cross.png",
+    "source": "C:\\Users\\AlixHady\\Documents\\Codex\\2026-10-10\\ple\\outputs\\PS4-original-6x-assets\\extracted\\Sce.PlayStation.PUI\\emoji_cross_src_4k.png",
+    "sha256": "dce9031e14613613eb9ba0b78578c9099abd115ab7ebe84c647b632bae414349",
+    "note": "Extracted resource; tutorial app icons are references, not verified dashboard textures."
+  },
+  {
+    "file": "circle.png",
+    "source": "C:\\Users\\AlixHady\\Documents\\Codex\\2026-10-10\\ple\\outputs\\PS4-original-6x-assets\\extracted\\Sce.PlayStation.PUI\\emoji_circle_src_4k.png",
+    "sha256": "0561f61f7ea03f1f79e1bed29239f990c323d75a5a57309bf2fec2b3e05c64ce",
+    "note": "Extracted resource; tutorial app icons are references, not verified dashboard textures."
+  },
+  {
+    "file": "options.png",
+    "source": "C:\\Users\\AlixHady\\Documents\\Codex\\2026-10-10\\ple\\outputs\\PS4-original-6x-assets\\extracted\\Sce.PlayStation.PUI\\emoji_options_src_4k.png",
+    "sha256": "b0597ab23f4bcc596e81c382046811fcf5ca58178aed53d9b37c7255525d5158",
+    "note": "Extracted resource; tutorial app icons are references, not verified dashboard textures."
+  },
+  {
+    "file": "select.wav",
+    "source": "PS4-System-Software-Sounds.zip/src11-Decide_refine_D_.wav",
+    "sha256": "3611611fb6cf171aa1a8f7c7447f3c5f24beaa1eb084091b3db63052326a7d3d",
+    "note": "Candidate event mapping; see SOUND-CATALOG.md"
+  },
+  {
+    "file": "cancel.wav",
+    "source": "PS4-System-Software-Sounds.zip/src10-Cancel_refine_D_.wav",
+    "sha256": "0a159ccefa9da0be7adf813d09e0bcbc147313c7ebed428e2db0e2fccb341a31",
+    "note": "Candidate event mapping; see SOUND-CATALOG.md"
+  },
+  {
+    "file": "store.png",
+    "source": "C:\\Users\\AlixHady\\Documents\\Codex\\2026-10-10\\ple\\work\\verified-resources\\app\\NPXS20979\\sce_sys\\icon0.png",
+    "sha256": "5092134e08c2c10983564fb94a09ffa3b7572ea09e7362279087b0045c4263b6",
+    "original_path": "/system_ex/app/NPXS20979/sce_sys/icon0.png",
+    "scope": "Complete original dashboard icon: artwork, background and lettering; no local composition"
+  }
+]

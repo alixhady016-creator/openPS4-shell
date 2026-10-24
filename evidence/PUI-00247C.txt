@@ -1,0 +1,56 @@
+Sce.PlayStation.PUI.UI2.FrameScene+WaitKeyNavigationAnimationTimer::Update
+Token 0x0600247C
+000C ldarg.0        
+000D ldfld          Sce.PlayStation.PUI.UI2.FrameScene+WaitKeyNavigationAnimationTimer::footerPanel [0x0400178C]
+0012 callvirt       Sce.PlayStation.PUI.WidgetBase::get_IsDisposed [0x06000BBF]
+0017 brfalse.s      33
+0019 ldarg.0        
+001A callvirt       Sce.PlayStation.PUI.FrameTask::Stop [0x06000CED]
+001F ldc.i4.1       
+0020 ret            
+0021 ldarg.0        
+0022 ldfld          Sce.PlayStation.PUI.UI2.FrameScene+WaitKeyNavigationAnimationTimer::footerPanel [0x0400178C]
+0027 callvirt       Sce.PlayStation.PUI.UI2.Widget::get_ParentScene [0x060027FB]
+002C brtrue.s       54
+002E ldarg.0        
+002F callvirt       Sce.PlayStation.PUI.FrameTask::Stop [0x06000CED]
+0034 ldc.i4.1       
+0035 ret            
+0036 ldarg.0        
+0037 call           Sce.PlayStation.PUI.FrameTask::get_IsStopped [0x06000CEE]
+003C brfalse.s      64
+003E ldc.i4.1       
+003F ret            
+0040 ldarg.0        
+0041 call           Sce.PlayStation.PUI.UITimer::get_TotalElapsedTimeSeconds [0x060010B7]
+0046 stloc.0        
+0047 ldloc.0        
+0048 ldarg.0        
+0049 call           Sce.PlayStation.PUI.UITimer::get_Interval [0x060010B4]
+004E conv.r8        
+004F ble.un.s       137
+0051 ldarg.0        
+0052 ldfld          Sce.PlayStation.PUI.UI2.FrameScene+WaitKeyNavigationAnimationTimer::footerPanel [0x0400178C]
+0057 callvirt       Sce.PlayStation.PUI.UI2.FrameFooterPanel::IsInFirstAnimationCycle [0x06002C32]
+005C brtrue.s       137
+005E ldc.i4.0       
+005F stloc.1        
+0060 ldarg.0        
+0061 ldfld          Sce.PlayStation.PUI.UITimer::Executed [0x040009AE]
+0066 brfalse.s      116
+0068 ldarg.0        
+0069 ldfld          Sce.PlayStation.PUI.UITimer::Executed [0x040009AE]
+006E callvirt       Sce.PlayStation.PUI.UITimer+ExecutedHandler::Invoke [0x060010C3]
+0073 stloc.1        
+0074 ldloc.1        
+0075 brfalse.s      127
+0077 ldarg.0        
+0078 call           Sce.PlayStation.PUI.UITimer::get_Repeat [0x060010B8]
+007D brfalse.s      135
+007F ldarg.0        
+0080 call           Sce.PlayStation.PUI.UITimer::Reset [0x060010BE]
+0085 br.s           137
+0087 ldc.i4.1       
+0088 ret            
+0089 ldc.i4.0       
+008A ret            

@@ -1,0 +1,36 @@
+import {sampleDashboardBoot,projectTransform,sceneEase} from './scene-motion.js';
+import {gameTileX,idleTarget} from './game-motion.js';
+export async function recoveryReview(shell){
+ const wait=ms=>new Promise(r=>setTimeout(r,ms)),checks=[];
+ const check=(name,passed,detail)=>checks.push({name,passed,detail});
+ const near=(a,b)=>Math.abs(a-b)<.01;
+ let r=shell.report();
+ check('Boot releases input lock and focuses content',r.state.ready&&!r.state.booting,r.state);
+ check('Original boot phase boundaries',[0,360,979,980,1880].map(t=>sampleDashboardBoot(t)).every((p,i)=>i===4?p.done:!p.done),[360,980,1880]);
+ check('Camera preserves native depth relationship',projectTransform(0,0,600).scale===.625,projectTransform(0,0,600));
+ check('Native aerial easing midpoint',near(sceneEase.aerial(.5),.8859375),sceneEase.aerial(.5));
+ shell.select(1);await wait(550);r=shell.report();
+ const tile=document.querySelectorAll('.tile')[1],strip=tile.querySelector('.tileStart');
+ check('Focused artwork uses firmware coordinates',near(r.tiles[1].x,288)&&near(r.tiles[1].s,330)&&getComputedStyle(tile).top==='209px',r.tiles[1]);
+ check('Native neighbor spacing',near(r.tiles[0].x,73)&&near(r.tiles[2].x,632),r.tiles);
+ check('Start strip is 70px and original blue Panel skin',getComputedStyle(strip).height==='70px'&&getComputedStyle(document.querySelectorAll('.tile')[2].querySelector('.tileStartMaterial')).backgroundColor==='rgba(63, 127, 223, 0.298)',getComputedStyle(strip).height);
+ check('Shader frame replaces CSS border',getComputedStyle(tile.querySelector('.tileOutline')).display==='none'&&document.querySelector('.firmwareGameFocus')?.width===1920,r.focusGlError);
+ const phases=[2.5,3.25,3.4,3.45,4.25].map(idleTarget);
+ check('Idle focus has pinch and recovery',phases[2].inside>0&&phases[3].inside===0&&phases[4].alpha===.8,phases);
+ shell.input('ArrowRight');await wait(110);r=shell.report();
+ check('Focus replacement interpolates both tiles',r.tiles[1].s<330&&r.tiles[1].s>200&&r.tiles[2].s>200&&r.tiles[2].s<330,r.tiles.slice(1,3));
+ await wait(500);shell.input('ArrowUp');await wait(400);r=shell.report();
+ check('Function-mode games use world translation and depth',r.row.y===740&&r.row.z===100&&r.row.opacity===.5,r.row);
+ const projection=projectTransform(0,740,100);
+ check('Reduced selected anchor uses original camera',near(projection.x+r.tiles[r.state.selected].x*projection.scale,408.181818)&&near(projection.y+209*projection.scale,911.818181),{projection,tiles:r.tiles});
+ shell.input('ArrowDown');await wait(65);shell.input('ArrowUp');await wait(65);shell.input('ArrowDown');await wait(500);r=shell.report();
+ check('Interrupted row changes settle without stale state',r.row.y===0&&r.row.z===0&&r.state.row==='games',r.row);
+ shell.setRow('functions');await wait(400);shell.input('ArrowRight');await wait(100);r=shell.report();
+ check('Function focus animates scale and opacity',r.functionFocus.some(f=>f.s>.5&&f.s<1&&f.a>.5&&f.a<1),r.functionFocus);
+ await wait(350);r=shell.report();
+ check('All shader contexts remain valid',r.glError===0&&r.focusGlError===0,r);
+ check('No browser script errors',r.errors.length===0,r.errors);
+ await wait(3100);r=shell.report();
+ check('Original function alpha-map shader actually draws',r.functionEffect.ready&&r.functionEffect.loaded&&r.functionEffect.frames>0&&!r.functionEffect.error,r.functionEffect);
+ return checks;
+}

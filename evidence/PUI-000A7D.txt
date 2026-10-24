@@ -1,0 +1,8 @@
+Sce.PlayStation.PUI.TransitionVariety+FrameFooterSlideIn::.cctor
+Token 0x06000A7D
+0001 ldc.r4         0.30000001192092896
+0006 ldc.r4         0.0
+000B call           Sce.PlayStation.PUI.AnimationCurve::get_EaseOutExpoAerial [0x06000C90]
+0010 newobj         Sce.PlayStation.PUI.AnimationOption::.ctor [0x06000BFF]
+0015 stsfld         Sce.PlayStation.PUI.TransitionVariety+FrameFooterSlideIn::option [0x04000614]
+001A ret            

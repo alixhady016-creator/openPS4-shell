@@ -1,0 +1,8 @@
+Sce.Vsh.ShellUI.Theme.ThemeConstants::get_DefaultThemeFocusColor
+Token 0x06003A70; RVA 0x100358
+0001  ldc.r4         0.0
+0006  ldc.r4         0.729411780834198
+000B  ldc.r4         1.0
+0010  ldc.r4         0.0
+0015  newobj         Sce.PlayStation.PUI.UIColor::.ctor [0x0A00021D]
+001A  ret            

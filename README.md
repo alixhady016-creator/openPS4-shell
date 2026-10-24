@@ -1,71 +1,135 @@
 # openPS4
 
-### A vibe-coded, reverse-engineered PlayStation 4 shell recreation
+**A vibe-coded, reverse-engineered PS4-style shell for Windows, built toward pixel-perfect visual and behavioral fidelity.**
 
-**openPS4** is an experimental, AI-assisted project aiming to reconstruct the original PlayStation 4 system interface with pixel-perfect visual and behavioral fidelity.
+openPS4 is the PS4 reconstruction developed by **alixhady016-creator** on top of **OrbisPro by SvenGDK**. It recreates the console shell experience—boot, Home, function row, local profiles, Settings, storage, notifications and Quick Menu—while connecting usable controls to Windows.
 
-Rather than simply designing a PS4-inspired theme, the project attempts to recover the original shell's implementation from firmware binaries, UI resources, animation routines, rendering assets, and native footage.
+“Vibe-coded” describes the development process: the project was built iteratively with OpenAI Codex, natural-language direction, screenshots, reference footage, binary investigation and repeated user feedback. The intent is to reproduce the original interface rather than invent a new dashboard that merely looks similar.
 
-The project is developed through a **vibe-coding workflow**, combining AI coding agents, reverse-engineering tools, automated source analysis, and iterative verification against the original console.
+**Pixel-perfect is the goal, not a claim that every screen is already exact.** Some dimensions, colors, easing curves, assets and state transitions are recovered directly from PS4 binaries. Others are footage-derived reconstructions or Windows adaptations. Remaining differences are documented instead of being presented as recovered native behavior.
 
-## What we're recreating
+## What it does
 
-- PS4 Home screen, function row, navigation, and tile animations
-- Settings menus and their subordinate interfaces
-- Profile selection, account management, and avatar customization
-- Notifications, Quick Menu, Library, and Power interfaces
-- Focus highlights, shaders, text rendering, transitions, and sound effects
+- PS4-style welcome, login and Home presentation with an animated wave background.
+- Game tiles, function-row navigation, selection outlines, sound effects and opening/closing transitions.
+- Local user creation, profile names, avatar selection and privacy preferences. These are app-local profiles, not Windows users or real PSN accounts.
+- Settings pages, Windows-backed controls and a PS4-style System Storage view.
+- Notifications using the app's shared Windows/Steam sources and Free Download Manager transfer integration where those providers expose data.
+- Quick Menu with shared notifications, Power, Sound/Devices, customization and sorting.
+- Original openPS4 game-launching and media functionality remains part of the underlying project.
 
-The goal is not only to reproduce how the PS4 looks, but also to understand and reconstruct how its original interface behaves.
+This is a Windows shell application, **not PS4 firmware, a PS4 emulator, or a replacement for PlayStation Network**. Network/social functionality and several optional Quick Menu entries are incomplete.
 
-## Reverse engineering and development
+## How the reconstruction works
 
-The reconstruction workflow combines several approaches.
+### Binary evidence first
 
-**Firmware and binary analysis**
+Existing firmware recovery is reused before new analysis. Targeted inspection follows managed types, methods, metadata tokens, constants and resource references. For example, Quick Menu recovery traced through `MenuPanel`, `SubMenuPanel`, PUI list controls and the theme skin system—not just the initial constructor color.
 
-Original PS4 implementation details are investigated through recovered binaries and resources. Where available, decompiled functions, constants, interface definitions, and state transitions are used to guide implementation.
+Recovered details include the blue OverlayPanel material, 280ms whole-menu depth transitions, sequential 200ms child fades, 500ms list insertion opacity, 250ms reorder movement, and 1.04× picked-row scaling. These are scoped findings from the inspected builds, not universal claims about every firmware/theme.
 
-**Tools and technologies**
+### REA and analysis tools
 
-- ILSpy for .NET assembly inspection and decompilation
-- REA-assisted reverse-engineering and source-recovery workflows
-- Recovered XML, UIBL, RCO and other UI resource data
-- C# / .NET for Windows application functionality
-- JavaScript, CSS, and rendering components for shell behavior and presentation
-- shadPS4's shader recompiler for shader validation
-- AI coding agents and local language models for evidence extraction, implementation, and review
+**REA / the `reverse-engineer-anything` skill** was used for targeted artifact investigation and evidence handling. Cached tool results and local analysis scripts were reused to avoid repeatedly decompiling the same functions. The workflow also used:
 
-**AI-assisted development**
+- **Python, dnfile and dncil** for managed assembly metadata and IL inspection.
+- **RCO/CXML resource recovery** for assets, component trees and layout values.
+- **Image/audio conversion tools** to make recovered resources usable in the Windows renderer.
+- **WebGL/GLSL ports** and shared motion components to reproduce rendering and focus behavior.
+- **Screenshots and reference videos** to validate visible layout, timing and transitions when implementation evidence was missing.
+- **Focused scripted runtime captures and user testing** to find interaction bugs that a successful build cannot detect.
 
-AI agents assist with source investigation, function recovery, code generation, debugging, and verification. Specialized workers analyze bounded tasks, while persistent evidence records help prevent repeated analysis and regressions.
+REA is a development/research tool, not a runtime dependency of openPS4. Complete firmware dumps, decrypted assemblies, reference videos and the private research workspace are not included in this repository. Selected findings retain method tokens and evidence boundaries in [the recovery notes](docs/recovery/).
 
-**Native footage comparison**
+### Native evidence versus adaptation
 
-Original PS4 recordings are used to check animations, layout geometry, timing, text, focus behavior, and visual effects. Footage-derived approximations are distinguished from behaviors confirmed by recovered code.
+|Evidence level|Meaning|
+|---|---|
+|Binary recovered|A value, resource or behavior is supported by a retained native/managed artifact reference.|
+|Footage confirmed|Visible behavior was compared against recordings; this does not establish the original implementation.|
+|Windows adaptation|The original presentation is connected to a local Windows operation or app-local state.|
+|Provisional / incomplete|The exact implementation or live service is not established or implemented.|
 
-## Development philosophy
+## Technology
 
-The project follows a source-first approach:
+|Layer|Used for|
+|---|---|
+|VB.NET, .NET 9, WPF|Windows application host, native integration and existing openPS4 functionality.|
+|Microsoft Edge WebView2|Hosts the reconstructed shell locally.|
+|JavaScript, HTML and CSS|Interface state, page layouts, local profiles and input routing.|
+|WebGL and GLSL|Wave/background rendering, focus effects and related graphics.|
+|PowerShell|Windows Settings, storage and notification/transfer provider bridges.|
+|Python|Development-time recovery, resource preparation and evidence processing.|
 
-1. Recover or locate evidence of the original implementation.
-2. Identify the relevant source functions, resources, and behavior.
-3. Reconstruct the functionality in the Windows environment.
-4. Compare the result against native PS4 footage.
-5. Verify compatibility with previously working interfaces.
+The project also uses the existing openPS4 dependency stack, including Newtonsoft.Json, LibVLCSharp, SharpDX, CoreAudio, ManagedNativeWifi and other packages listed in the project file.
 
-Recovered behavior, inferred behavior, and visual approximations are tracked separately.
+## Project map
 
-## Project status
+|Path|Purpose|
+|---|---|
+|`openPS4.sln`|Visual Studio solution.|
+|`openPS4/openPS4.vbproj`|Windows host project and dependency declarations.|
+|`openPS4/ShellWindow.xaml.vb`|WebView2 hosting, application bridge and scripted review entry points.|
+|`openPS4/Classes/`|Windows services, settings controls, input and existing application logic.|
+|`openPS4/Shell/shell.js`|Shell state, input and interface coordination.|
+|`openPS4/Shell/scene-motion.js`|Shared projection/easing support.|
+|`openPS4/Shell/game-*.js`, `function-*.js`|Tile and function-row navigation, focus and motion.|
+|`openPS4/Shell/*.frag`|GLSL shaders used by the shell renderer.|
+|`openPS4/Shell/local-profiles.js`, `profile-*`|Local user setup, avatar catalog and profile presentation.|
+|`openPS4/Shell/interface-settings.js`, `settings-*`|Settings presentation and Windows bridge.|
+|`openPS4/Shell/system-storage.*`, `storage-data.ps1`|Storage presentation and capacity/category data.|
+|`openPS4/Shell/interface-notifications.js`|Shared notification model and full notification interface.|
+|`openPS4/Shell/quick-menu*`|Quick Menu controls, recovered constants, animation and hold input.|
+|`openPS4/Shell/assets/`|Packaged artwork, fonts, audio, avatar images and renderer data; provenance files identify sources where available.|
+|`evidence/`, `docs/recovery/`|Selected method receipts and recovery findings.|
+|`tools/`, `tests/`|Development utilities and smoke tests.|
+|`docs/UPSTREAM-README.md`|Preserved upstream openPS4 documentation and attribution.|
 
-**Experimental — active development.**
+## Build and run
 
-Many PS4 shell components have been reconstructed, but complete native fidelity has not yet been achieved. Some interfaces and animations still require further source recovery, functional integration, and visual verification.
+Requirements:
 
-openPS4 is a shell recreation, **not a PlayStation 4 emulator**, and does not currently claim to run PS4 console binaries.
+- Windows 10/11 x64.
+- .NET 9 SDK for building, plus the .NET Desktop Runtime for running framework-dependent output.
+- Microsoft Edge WebView2 Runtime.
+- The external libraries expected by the existing openPS4 host.
 
-## Disclaimer
+Most dependencies restore through NuGet. Four existing host references—`GameArchives.dll`, `HtmlAgilityPack.dll`, `PARAM.SFO.dll` and `PS4_Tools.dll`—are resolved from an extracted openPS4 runtime directory. Supply that directory explicitly; it is not a firmware directory.
 
-openPS4 is an independent, unofficial project and is not affiliated with, endorsed by, or associated with Sony Interactive Entertainment.
+```powershell
+.\Build-PS4.ps1 -RuntimePath 'C:\path\to\openPS4 runtime'
+.\Run-PS4.cmd
+```
 
-PlayStation and related trademarks belong to their respective owners. The project's code and any third-party assets have separate ownership and licensing considerations.
+For an existing complete dependency bundle:
+
+```powershell
+.\Build-PS4.ps1 -RuntimePath 'C:\path\to\dependency bundle' -UseBundledDependencies
+```
+
+You can also open `openPS4.sln` in Visual Studio and set the MSBuild property `openPS4RuntimePath` to the dependency directory. Native media/emulator features may require their own runtime components and configuration; those are not supplied by this source upload. The publishing copy has been compiled with the existing local dependency bundle; a clean-machine setup has not been certified.
+
+## Controls
+
+- Arrow keys / controller directional input: navigate.
+- Enter / Cross: select; Escape / Circle: back.
+- Home/End on the keyboard or L1/R1: jump to the ends of the Home tile row.
+- **Hold the Windows key or controller PS/Home button** to toggle Quick Menu. The current 600ms threshold is a provisional adapter value, not a recovered native threshold.
+
+Actual controller delivery depends on Windows, driver and mapping behavior. Scripted input tests do not substitute for physical button testing.
+
+## Current fidelity and limitations
+
+The project is actively refined from binary findings and direct feedback. Known gaps include parts of native text glow, some inner social-panel layout details, unavailable PSN services, and unported theme/VR/accessibility variants. Some controls are local adaptations or previews. See [Quick Menu customization](docs/recovery/quick-menu-customization.md), [animation recovery](docs/recovery/quick-menu-animation-recovery.md), and [theme recovery](docs/recovery/quick-menu-theme-recovery.md).
+
+Historical investigation documents reflect the state when written; later correction reports supersede earlier assumptions. Passing compilation and scripted checks proves neither a universal native match nor complete functionality.
+
+## Credits and asset provenance
+
+- **alixhady016-creator**: project direction, reference capture, feedback and this reconstruction.
+- **SvenGDK / OrbisPro**: original Windows application foundation; upstream source attribution is retained.
+- **OpenAI Codex**: AI-assisted implementation, investigation and iterative debugging.
+- **REA and the analysis tools**: artifact investigation and evidence-guided recovery workflow.
+- **Sony Interactive Entertainment and other respective rights holders**: PlayStation names, interface artwork, fonts, sounds and third-party character imagery.
+
+This is an independent fan/research project, not an official Sony product. Included third-party material retains its original ownership; this repository does not assign a blanket license to that material. No new license is imposed on the upstream project by this publication.

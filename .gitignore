@@ -1,0 +1,23 @@
+*.suo
+*.user
+.vs
+bin
+obj
+packages
+.build-home/
+*.mp4
+
+# Local runtime data and publishing/build artifacts
+openPS4/System/
+openPS4/Games/
+openPS4/Apps/
+ShellUserData/
+ShellReview/
+**/ShellUserData/
+**/ShellReview/
+*.clixml
+*.pfx
+*.pem
+*.key
+Update.zip
+openPS4Update.exe

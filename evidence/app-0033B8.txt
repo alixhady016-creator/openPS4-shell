@@ -1,0 +1,305 @@
+Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::init
+Token 0x060033B8; RVA 0xDF000; parameters: w
+000C  ldarg.0        
+000D  ldflda         Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_defaultPos [0x040022A8]
+0012  ldarg.1        
+0013  callvirt       Sce.PlayStation.PUI.UINode::get_X [0x0A0000FF]
+0018  stfld          Sce.PlayStation.Core.Vector2::X [0x0A000849]
+001D  ldarg.0        
+001E  ldflda         Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_defaultPos [0x040022A8]
+0023  ldarg.1        
+0024  callvirt       Sce.PlayStation.PUI.UINode::get_Y [0x0A000100]
+0029  stfld          Sce.PlayStation.Core.Vector2::Y [0x0A00084A]
+002E  ldarg.0        
+002F  ldflda         Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_defaultSize [0x040022A9]
+0034  ldarg.1        
+0035  callvirt       Sce.PlayStation.PUI.UINode::get_Width [0x0A00014B]
+003A  stfld          Sce.PlayStation.Core.Vector2::X [0x0A000849]
+003F  ldarg.0        
+0040  ldflda         Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_defaultSize [0x040022A9]
+0045  ldarg.1        
+0046  callvirt       Sce.PlayStation.PUI.UINode::get_Height [0x0A000520]
+004B  stfld          Sce.PlayStation.Core.Vector2::Y [0x0A00084A]
+0050  ldarg.1        
+0051  ldc.i4.1       
+0052  callvirt       Sce.PlayStation.PUI.WidgetBase::set_Focusable [0x0A000148]
+0057  ldarg.0        
+0058  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_numberDecorator [0x040022B3]
+005D  brfalse.s      120
+005F  ldarg.0        
+0060  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_numberDecorator [0x040022B3]
+0065  ldarg.0        
+0066  dup            
+0067  ldvirtftn      Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::SetNotifyNumber [0x060033D5]
+006D  newobj         TypeSpec(1512810d0108)::.ctor [0x0A000110]
+0072  callvirt       Sce.Vsh.ShellUI.TopMenu.INotifyNumberDecorator::SetNumberDecorateAction [0x0600335E]
+0077  pop            
+0078  ldarg.0        
+0079  callvirt       Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::InitIcon [0x060033BA]
+007E  ldarg.0        
+007F  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_scalePanel [0x040022A1]
+0084  brfalse.s      168
+0086  ldarg.0        
+0087  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_scalePanel [0x040022A1]
+008C  ldarg.0        
+008D  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_iconImage [0x040022A3]
+0092  callvirt       Sce.PlayStation.PUI.UI2.Widget::AppendChild [0x0A00007E]
+0097  ldarg.0        
+0098  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_scalePanel [0x040022A1]
+009D  ldarg.0        
+009E  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_iconLabel [0x040022A2]
+00A3  callvirt       Sce.PlayStation.PUI.UI2.Widget::AppendChild [0x0A00007E]
+00A8  ldarg.0        
+00A9  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_iconLabel [0x040022A2]
+00AE  brfalse.s      226
+00B0  ldarg.0        
+00B1  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_iconLabel [0x040022A2]
+00B6  callvirt       Sce.PlayStation.PUI.WidgetBase::get_Text [0x0A000155]
+00BB  call           Sce.Vsh.Lx.UT::Empty [0x0A000161]
+00C0  brtrue.s       226
+00C2  ldarg.0        
+00C3  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_basePanel [0x040022A0]
+00C8  callvirt       Sce.PlayStation.PUI.UI2.Widget::get_CustomSpeech [0x0A00076C]
+00CD  ldarg.0        
+00CE  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_iconLabel [0x040022A2]
+00D3  callvirt       Sce.PlayStation.PUI.WidgetBase::get_Text [0x0A000155]
+00D8  newobj         Sce.PlayStation.PUI.UI2.SpeechText::.ctor [0x0A000430]
+00DD  callvirt       Sce.PlayStation.PUI.UI2.CustomSpeech::set_SpeechText [0x0A0008D0]
+00E2  ldarg.0        
+00E3  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_countLabel [0x040022A5]
+00E8  brfalse        910
+00ED  ldarg.0        
+00EE  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_countLabel [0x040022A5]
+00F3  ldc.i4.1       
+00F4  callvirt       Sce.PlayStation.PUI.UI2.Label::set_FitWidthToText [0x0A00050F]
+00F9  ldarg.0        
+00FA  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_countLabel [0x040022A5]
+00FF  ldc.i4.1       
+0100  callvirt       Sce.PlayStation.PUI.UI2.Label::set_FitHeightToText [0x0A000510]
+0105  ldarg.0        
+0106  ldarg.0        
+0107  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_basePanel [0x040022A0]
+010C  newobj         Sce.PlayStation.PUI.UI2.Widget::.ctor [0x0A000500]
+0111  dup            
+0112  ldc.r4         0.0
+0117  callvirt       Sce.PlayStation.PUI.UINode::set_X [0x0A000218]
+011C  dup            
+011D  ldc.r4         -18.0
+0122  callvirt       Sce.PlayStation.PUI.UINode::set_Y [0x0A000219]
+0127  dup            
+0128  ldc.r4         0.0
+012D  callvirt       Sce.PlayStation.PUI.UINode::set_Opacity [0x0A0000F9]
+0132  call           Sce.Vsh.ShellUI.AppSystem.Utility::Append [0x2B000027]
+0137  stfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_countBase [0x040022A4]
+013C  ldarg.0        
+013D  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_countBaseImage [0x040022A6]
+0142  brfalse        611
+0147  ldarg.0        
+0148  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_basePanel [0x040022A0]
+014D  callvirt       Sce.PlayStation.PUI.UI2.Widget::GetScene [0x0A0001DC]
+0152  isinst         Sce.Vsh.ShellUI.TopMenu.SystemAreaScene [0x02000838]
+0157  stloc.0        
+0158  ldloc.0        
+0159  brfalse        575
+015E  ldloc.0        
+015F  callvirt       Sce.Vsh.ShellUI.TopMenu.SystemAreaScene::get_ThemeInfo [0x0600328A]
+0164  brfalse        575
+0169  ldloc.0        
+016A  callvirt       Sce.Vsh.ShellUI.TopMenu.SystemAreaScene::get_ThemeInfo [0x0600328A]
+016F  ldfld          Sce.Vsh.ShellUI.Theme.ThemeInfoForTopMenu::formatVersion [0x04002855]
+0174  ldstr          '1.0'
+0179  call           System.String::op_Equality [0x0A000275]
+017E  brtrue.s       410
+0180  ldloc.0        
+0181  callvirt       Sce.Vsh.ShellUI.TopMenu.SystemAreaScene::get_ThemeInfo [0x0600328A]
+0186  ldfld          Sce.Vsh.ShellUI.Theme.ThemeInfoForTopMenu::formatVersion [0x04002855]
+018B  ldstr          '2.0'
+0190  call           System.String::op_Equality [0x0A000275]
+0195  brfalse        575
+019A  ldarg.0        
+019B  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_countBase [0x040022A4]
+01A0  ldarg.0        
+01A1  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_countBaseImage [0x040022A6]
+01A6  call           Sce.Vsh.ShellUI.AppSystem.Utility::Append [0x2B0000A6]
+01AB  pop            
+01AC  ldarg.0        
+01AD  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_countBaseImage [0x040022A6]
+01B2  ldstr          'cxml://TopMenuPlugin/tex_indi_base'
+01B7  ldnull         
+01B8  ldnull         
+01B9  ldnull         
+01BA  call           Sce.Vsh.ShellUI.TopMenu.TopMenuPlugin::SetImage [0x06002F17]
+01BF  ldarg.0        
+01C0  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_countBaseImage [0x040022A6]
+01C5  ldc.r4         -4.0
+01CA  callvirt       Sce.PlayStation.PUI.UINode::set_X [0x0A000218]
+01CF  ldloc.0        
+01D0  callvirt       Sce.PlayStation.PUI.UI2.Scene::get_IsFontScaleEnhanced [0x0A000511]
+01D5  brfalse.s      505
+01D7  ldarg.0        
+01D8  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_countBaseImage [0x040022A6]
+01DD  ldc.r4         -10.0
+01E2  callvirt       Sce.PlayStation.PUI.UINode::set_Y [0x0A000219]
+01E7  ldarg.0        
+01E8  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_countBaseImage [0x040022A6]
+01ED  ldc.r4         34.0
+01F2  callvirt       Sce.PlayStation.PUI.UINode::set_Height [0x0A00021B]
+01F7  br.s           537
+01F9  ldarg.0        
+01FA  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_countBaseImage [0x040022A6]
+01FF  ldc.r4         -4.0
+0204  callvirt       Sce.PlayStation.PUI.UINode::set_Y [0x0A000219]
+0209  ldarg.0        
+020A  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_countBaseImage [0x040022A6]
+020F  ldc.r4         24.0
+0214  callvirt       Sce.PlayStation.PUI.UINode::set_Height [0x0A00021B]
+0219  ldarg.0        
+021A  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_countBaseImage [0x040022A6]
+021F  ldc.r4         1.0
+0224  ldc.r4         1.0
+0229  ldc.r4         1.0
+022E  ldc.r4         0.6000000238418579
+0233  newobj         Sce.PlayStation.PUI.UIColor::.ctor [0x0A00021D]
+0238  callvirt       Sce.PlayStation.PUI.UI2.ImageBox::set_FilterColor [0x0A0009C2]
+023D  br.s           611
+023F  ldarg.0        
+0240  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_countBaseImage [0x040022A6]
+0245  ldc.r4         0.0
+024A  ldc.r4         0.0
+024F  ldc.r4         0.0
+0254  ldc.r4         0.0
+0259  newobj         Sce.PlayStation.PUI.UIColor::.ctor [0x0A00021D]
+025E  callvirt       Sce.PlayStation.PUI.UI2.ImageBox::set_FilterColor [0x0A0009C2]
+0263  ldarg.0        
+0264  newobj         Sce.PlayStation.PUI.UI2.GlowEffect::.ctor [0x0A000A9A]
+0269  dup            
+026A  ldc.r4         0.800000011920929
+026F  callvirt       Sce.PlayStation.PUI.UI2.GlowEffect::set_Intensity [0x0A000AA2]
+0274  dup            
+0275  ldc.r4         2.0
+027A  callvirt       Sce.PlayStation.PUI.UI2.GlowEffect::set_Radius [0x0A000A9B]
+027F  dup            
+0280  ldc.r4         25.0
+0285  callvirt       Sce.PlayStation.PUI.UI2.GlowEffect::set_LevelOfDetail [0x0A000A9C]
+028A  dup            
+028B  ldc.r4         1.0
+0290  ldc.r4         1.0
+0295  ldc.r4         1.0
+029A  ldc.r4         1.0
+029F  newobj         Sce.PlayStation.PUI.UIColor::.ctor [0x0A00021D]
+02A4  callvirt       Sce.PlayStation.PUI.UI2.GlowEffect::set_Color [0x0A000A9D]
+02A9  dup            
+02AA  ldc.i4.1       
+02AB  callvirt       Sce.PlayStation.PUI.UI2.GlowEffect::set_ReuseOffscreenTexture [0x0A000A9E]
+02B0  stfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_glow [0x040022AA]
+02B5  ldarg.0        
+02B6  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_countBase [0x040022A4]
+02BB  ldarg.0        
+02BC  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_countLabel [0x040022A5]
+02C1  call           Sce.Vsh.ShellUI.AppSystem.Utility::Append [0x2B000034]
+02C6  pop            
+02C7  ldarg.0        
+02C8  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_countImage [0x040022A7]
+02CD  brfalse.s      803
+02CF  ldarg.0        
+02D0  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_countBase [0x040022A4]
+02D5  ldarg.0        
+02D6  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_countImage [0x040022A7]
+02DB  call           Sce.Vsh.ShellUI.AppSystem.Utility::Append [0x2B0000A6]
+02E0  pop            
+02E1  ldarg.0        
+02E2  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_countImage [0x040022A7]
+02E7  ldc.r4         1.0
+02EC  callvirt       Sce.PlayStation.PUI.UINode::set_Opacity [0x0A0000F9]
+02F1  ldarg.0        
+02F2  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_countImage [0x040022A7]
+02F7  ldc.r4         0.0
+02FC  callvirt       Sce.PlayStation.PUI.UINode::set_X [0x0A000218]
+0301  ldarg.0        
+0302  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_countImage [0x040022A7]
+0307  ldc.r4         0.0
+030C  callvirt       Sce.PlayStation.PUI.UINode::set_Y [0x0A000219]
+0311  ldarg.0        
+0312  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_countLabel [0x040022A5]
+0317  ldc.r4         24.0
+031C  callvirt       Sce.PlayStation.PUI.UINode::set_X [0x0A000218]
+0321  br.s           819
+0323  ldarg.0        
+0324  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_countLabel [0x040022A5]
+0329  ldc.r4         24.0
+032E  callvirt       Sce.PlayStation.PUI.UINode::set_X [0x0A000218]
+0333  ldarg.0        
+0334  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_countLabel [0x040022A5]
+0339  ldc.r4         15.0
+033E  callvirt       Sce.PlayStation.PUI.UI2.Label::set_TopBaselineY [0x0A00051D]
+0343  call           Sce.PlayStation.PUI.UISystem::get_RenderingSettings [0x0A0003B2]
+0348  callvirt       Sce.PlayStation.PUI.RenderingSettings::get_VideoOutVRMode [0x0A0003B3]
+034D  brtrue.s       871
+034F  call           Sce.Vsh.ShellUI.BGLayer.BackgroundLayer::get_IsHmuMount [0x06011E3F]
+0354  brtrue.s       871
+0356  ldarg.0        
+0357  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_countLabel [0x040022A5]
+035C  ldarg.0        
+035D  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_glow [0x040022AA]
+0362  callvirt       Sce.PlayStation.PUI.UI2.Widget::set_PostEffect [0x0A000A9F]
+0367  ldarg.0        
+0368  ldftn          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::OnHmuMountChanged [0x060033BD]
+036E  newobj         TypeSpec(1512816d0112c000aad8)::.ctor [0x0A001146]
+0373  call           Sce.Vsh.ShellUI.BGLayer.BackgroundLayer::add_HmuMountChanged [0x06011E41]
+0378  call           Sce.PlayStation.PUI.UISystem::get_RenderingSettings [0x0A0003B2]
+037D  ldarg.0        
+037E  ldftn          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::OnVRModeChanged [0x060033BE]
+0384  newobj         TypeSpec(1512816d01129149)::.ctor [0x0A001147]
+0389  callvirt       Sce.PlayStation.PUI.RenderingSettings::add_VideoOutVRModeChanged [0x0A001148]
+038E  ldarg.0        
+038F  ldc.i4.0       
+0390  callvirt       Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::SetNotifyNumber [0x060033D5]
+0395  ldarg.0        
+0396  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_iconLabel [0x040022A2]
+039B  brfalse.s      1051
+039D  ldarg.0        
+039E  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_iconLabel [0x040022A2]
+03A3  ldc.r4         -192.0
+03A8  callvirt       Sce.PlayStation.PUI.UINode::set_X [0x0A000218]
+03AD  ldarg.0        
+03AE  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_iconLabel [0x040022A2]
+03B3  ldc.r4         512.0
+03B8  callvirt       Sce.PlayStation.PUI.UINode::set_Width [0x0A00021A]
+03BD  ldarg.0        
+03BE  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_iconLabel [0x040022A2]
+03C3  ldc.i4.1       
+03C4  callvirt       Sce.PlayStation.PUI.UI2.Label::set_FitHeightToText [0x0A000510]
+03C9  ldarg.1        
+03CA  newobj         Sce.PlayStation.PUI.UI2.FocusCustomSettings::.ctor [0x0A000501]
+03CF  dup            
+03D0  ldarg.0        
+03D1  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_iconLabel [0x040022A2]
+03D6  callvirt       Sce.PlayStation.PUI.UI2.FocusCustomSettings::set_RenderTarget [0x0A00053D]
+03DB  callvirt       Sce.PlayStation.PUI.UI2.Widget::set_FocusCustomSettings [0x0A000507]
+03E0  ldarg.0        
+03E1  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_iconLabel [0x040022A2]
+03E6  ldc.i4.3       
+03E7  callvirt       Sce.PlayStation.PUI.UI2.Widget::set_FocusStyle [0x0A000079]
+03EC  ldarg.0        
+03ED  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_iconLabel [0x040022A2]
+03F2  newobj         Sce.PlayStation.PUI.UI2.FocusCustomSettings::.ctor [0x0A000501]
+03F7  dup            
+03F8  ldc.r4         192.0
+03FD  ldc.r4         0.0
+0402  ldc.r4         128.0
+0407  ldc.r4         48.0
+040C  newobj         Sce.PlayStation.Core.Rectangle::.ctor [0x0A001033]
+0411  callvirt       Sce.PlayStation.PUI.UI2.FocusCustomSettings::set_SearchHintRectangle [0x0A001149]
+0416  callvirt       Sce.PlayStation.PUI.UI2.Widget::set_FocusCustomSettings [0x0A000507]
+041B  ldarg.1        
+041C  ldarg.0        
+041D  dup            
+041E  ldvirtftn      Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::IconKeyEventReceived [0x060033C4]
+0424  newobj         TypeSpec(1512816d01128171)::.ctor [0x0A000083]
+0429  callvirt       Sce.PlayStation.PUI.WidgetBase::add_KeyEventReceived [0x0A000281]
+042E  ldarg.1        
+042F  ldarg.0        
+0430  ldftn          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::OnFocusChanged [0x060033C5]
+0436  newobj         TypeSpec(1512816d01128851)::.ctor [0x0A0005BA]
+043B  callvirt       Sce.PlayStation.PUI.UI2.Widget::add_FocusChanged [0x0A0005BB]
+0440  ret            

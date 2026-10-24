@@ -1,0 +1,46 @@
+/* Logical 1920×1080 native geometry: quick-menu-native.js and recovery receipts. */
+.quickMenu{position:absolute;inset:0;width:1920px;height:1080px;z-index:80;color:#fff;font-family:PS4Footer,'Segoe UI',sans-serif;font-weight:300;text-align:left;outline:none;isolation:isolate}.quickMenu[hidden]{display:none!important}.qmSurface{position:absolute;left:0;top:0;width:996px;height:1080px;background:rgba(21,21,44,.94);overflow:hidden}.qmSurface[data-panel=devices]{width:1744px}.qmSurface[data-panel=customize]{width:1640px}.qmSurface[data-panel=power]{width:1330px}.qmTitle{position:absolute;left:96px;top:58px;margin:0;font-size:60px;line-height:74px;font-weight:300}.qmTitle:after{content:'';position:absolute;left:-96px;top:76px;width:1800px;border-bottom:2px solid #ffffff25}.qmRoot{position:absolute;left:100px;top:146px;width:436px}.qmRow{position:relative;display:flex;align-items:center;gap:22px;height:88px;width:100%;box-sizing:border-box;padding:0 16px;border:0;background:transparent;color:inherit;font:300 36px PS4Footer,'Segoe UI',sans-serif;text-align:left;outline:none;cursor:pointer}.qmIcon{width:56px;height:56px;object-fit:contain;flex:none}.qmLabel{white-space:nowrap}.qmSelected{background:rgba(255,255,255,.055)}.quickMenu:not(.qmShader) .qmSelected{outline:3px solid #fff;outline-offset:-2px}.qmInactive{color:#ffffff70}.qmInactive .qmIcon{opacity:.5}.qmDetail{position:absolute;left:584px;top:146px;right:48px}.qmDetail .qmRow{height:94px;font-size:34px;padding:0 12px;gap:22px}.qmDetail .qmIcon{width:48px;height:48px}.qmDetail .qmValue{margin-left:auto;font-size:28px;color:#ffffffa8;white-space:nowrap}.qmDetailTitle{font-size:36px;font-weight:300;margin:22px 0}.qmEmpty{font-size:30px;line-height:1.5;margin-top:65px;color:#ffffffb3}.qmUnavailable{color:#ffffff80}.qmUnavailable .qmIcon{opacity:.55}.qmMeter{width:220px;height:28px;flex:none;margin-left:20px;background:linear-gradient(90deg,#fff var(--volume),#ffffff30 var(--volume));mask:repeating-linear-gradient(90deg,#000 0 4px,transparent 4px 8px)}.qmHelp{font-size:26px;color:#ffffffb3;margin:30px 12px}.qmStatus{position:absolute;left:96px;right:28px;top:972px;height:60px;display:flex;align-items:center;gap:12px;font-size:30px;white-space:nowrap}.qmStatus:before{content:'';position:absolute;left:-96px;right:-28px;top:-4px;border-top:2px solid #ffffff28}.qmAvatar{width:48px;height:48px;object-fit:cover}.qmController{width:42px;height:42px;object-fit:contain;margin-left:24px}.qmFooter{position:absolute;left:96px;bottom:14px;font-size:24px;color:#ffffffb0}.qmLive{position:absolute;left:584px;top:884px;right:40px;font-size:25px;color:#ffffffd8;line-height:1.4}@media(prefers-reduced-motion:reduce){.qmSurface{transition:none}.qmVisible .qmSurface{animation:none}}
+
+.qmRoot>.qmRow:first-child{margin-bottom:16px}.qmSurface[data-panel=customize]{width:996px}.qmSurface[data-panel=customize][data-expanded=true]{width:1640px}
+
+.qmRoot>.qmRow:first-child:after{content:'';position:absolute;left:12px;right:12px;bottom:-8px;height:2px;background:rgba(255,255,255,.2)}.qmBattery{width:48px;height:32px;object-fit:contain;filter:brightness(0) invert(1);margin-left:-8px}
+
+/* Native6.00 overrides: 0902D/08E78/08980/089A6/08AF2/08A85/08A61. */
+.qmSurface{width:948px}.qmSurface:after{content:'';position:absolute;right:0;top:0;width:4px;height:1080px;background:rgba(0,0,0,.3);pointer-events:none}
+.qmSurface[data-panel=devices]{width:1693px}.qmSurface[data-panel=customize]{width:948px}.qmSurface[data-panel=customize][data-expanded=true]{width:1571px}
+.qmRoot{left:103px;top:150px;width:430px;height:796px;overflow:hidden}.qmDetail{left:577px;top:150px;right:22px;max-height:796px;overflow:hidden}
+.qmRow,.qmDetail .qmRow{height:84px;font-size:33px;padding:0;gap:20px;line-height:84px}.qmIcon,.qmDetail .qmIcon{width:64px;height:64px;margin-left:10px}.qmInactive{color:inherit}.qmInactive .qmRow{opacity:.4}.qmInactive .qmParentSelected{opacity:1}.qmInactive .qmIcon{opacity:1}
+.qmSelected{background:transparent}.qmTitle:after{top:77px}.qmStatus:before{top:-1px}
+
+.qmDetail{width:349px;right:auto}.qmSurface[data-panel=devices] .qmDetail{width:1094px}.qmSurface[data-panel=power] .qmDetail{width:731px}
+.qmOptions{position:absolute;left:970px;top:150px;width:579px;max-height:796px;overflow:hidden}.qmOptions .qmRow{height:84px;font-size:33px}.qmInactive .qmParentSelected{opacity:1}.qmOptions.qmInactive .qmRow{opacity:.4}
+.qmOptions .qmValue{margin-left:auto;margin-right:10px}.qmDetail .qmIcon,.qmOptions .qmIcon{flex:none}
+
+.qmTitle{left:0;top:0;width:1920px;height:136px;line-height:0}.qmTitleCanvas{width:1920px;height:136px}.qmTitle:after{left:0;top:135px}
+
+.qmSurface[data-panel=power]{width:1658px}.qmSurface[data-panel=power] .qmDetail{width:1059px}
+/* PUI CheckBox style0: 54px, original ninepatch8 margin4 + checked sprite. */
+.qmCheck{position:absolute;right:10px;top:15px;width:54px;height:54px;box-sizing:border-box;border:4px solid transparent;border-image-source:url('assets/quick-menu/image_checkbox_base_src.png');border-image-slice:4;border-image-width:4px;border-image-repeat:stretch;pointer-events:none}.qmCheckMark{position:absolute;left:-4px;top:-4px;width:54px;height:54px}
+
+/* app0089A5 normal separator: 41px row, line x10/y20, h2, alpha .5*.5. */
+.qmRoot>.qmRow:first-child{margin-bottom:0}.qmRoot>.qmRow:first-child:after{display:none}.qmSeparator{position:relative;width:100%;height:41px}.qmSeparator:after{content:'';position:absolute;left:10px;right:10px;top:20px;height:2px;background:rgba(255,255,255,.25)}.qmRoot.qmInactive .qmSeparator{opacity:.4}
+
+/* Theme.dll 06000009 OverlayPanel14 -> component4 -> color3; blue palette. */
+.qmSurface{background:rgba(3,29,97,.9803921568627451)}
+
+/* Native child widths and status template: recovered panel/CXML receipts. */
+.qmSurface[data-panel=notifications] .qmDetail{left:632px;width:989px;overflow-y:auto;scrollbar-width:none}
+.qmSurface[data-panel=friends] .qmDetail{width:662px;height:796px}
+.qmSurface[data-panel=party] .qmDetail{width:896px;height:796px;overflow:visible}
+.qmPowerSeparator{height:22px;position:relative}.qmPowerSeparator:after{content:'';position:absolute;left:0;right:0;top:10px;height:2px;background:rgba(255,255,255,.2)}
+.qmPartyStatus{position:absolute;left:20px;top:82px;width:900px;height:716px}.qmPartyMessage{position:absolute;left:0;top:308px;width:900px;height:100px;font-size:30px;line-height:38px;text-align:center;margin:0}
+.qmFriendsEmpty{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;margin:0;font-size:33px}
+.qmNotification{align-items:flex-start;line-height:64px;border-bottom:1px solid #ffffff30}.qmNotification .qmIcon{margin-top:10px}.qmNotification .qmLabel{font-size:33px;max-width:875px;overflow:hidden;text-overflow:ellipsis}.qmNotificationSecondary,.qmNotificationSource{position:absolute;left:94px;right:10px;top:60px;font-size:26px;line-height:38px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#ffffffb3}.qmNotificationSource{top:98px}
+
+.qmFooter{display:none}
+
+/* SubMenuPanel9314 and BasicSubMenuPanel931C add 22px on both sides. */
+.qmSurface[data-panel=devices] .qmDetail{width:1138px}
+.qmSurface[data-panel=power] .qmDetail{width:1103px}
+.qmSurface[data-panel=customize] .qmDetail{width:393px}
+.qmOptions{left:1014px;width:623px}

@@ -1,0 +1,23 @@
+Sce.PlayStation.PUI.UIColor::.ctor
+Token 0x06000DD4
+0001 ldarga.s       argument(0x0001)
+0003 call           Sce.PlayStation.PUI.UIColor::SaturateValue [0x06000DE6]
+0008 ldarga.s       argument(0x0002)
+000A call           Sce.PlayStation.PUI.UIColor::SaturateValue [0x06000DE6]
+000F ldarga.s       argument(0x0003)
+0011 call           Sce.PlayStation.PUI.UIColor::SaturateValue [0x06000DE6]
+0016 ldarga.s       argument(0x0004)
+0018 call           Sce.PlayStation.PUI.UIColor::SaturateValue [0x06000DE6]
+001D ldarg.0        
+001E ldarg.1        
+001F stfld          Sce.PlayStation.PUI.UIColor::R [0x04000822]
+0024 ldarg.0        
+0025 ldarg.2        
+0026 stfld          Sce.PlayStation.PUI.UIColor::G [0x04000823]
+002B ldarg.0        
+002C ldarg.3        
+002D stfld          Sce.PlayStation.PUI.UIColor::B [0x04000824]
+0032 ldarg.0        
+0033 ldarg.s        argument(0x0004)
+0035 stfld          Sce.PlayStation.PUI.UIColor::A [0x04000825]
+003A ret            

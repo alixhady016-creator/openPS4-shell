@@ -1,0 +1,7 @@
+Sce.PlayStation.PUI.UI2.OrbisStyle.OrbisFrameFooterPanelStyle::get_DefaultHeight
+Token 0x0600431D
+0001 ldsfld         Sce.PlayStation.PUI.UIValues::ScreenHeight [0x040006E7]
+0006 conv.r4        
+0007 ldc.r4         0.1259259283542633
+000C mul            
+000D ret            

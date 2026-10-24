@@ -1,0 +1,72 @@
+[
+  {
+    "asset": "summary-download.png",
+    "source": "C:\\Users\\AlixHady\\Documents\\Codex\\2026-10-14\\for-more-previous-findings-extracted-binary\\outputs\\windows-interface-fix\\quickmenu-original\\tex_icon_summary_download_src.dds",
+    "sourceSha256": "200e8fe63663dc4abb4f27e04f879de48a096626f6ae622474ab8d9b460893a8",
+    "size": [
+      160,
+      160
+    ],
+    "conversion": "Pillow decode RGBA; no resizing or redrawing"
+  },
+  {
+    "asset": "summary-upload.png",
+    "source": "C:\\Users\\AlixHady\\Documents\\Codex\\2026-10-14\\for-more-previous-findings-extracted-binary\\outputs\\windows-interface-fix\\quickmenu-original\\tex_icon_summary_upload_src.dds",
+    "sourceSha256": "dd38cd69202476e18e620a1cfa21b6c16e988205aba0aff0d58b39441f94b9b5",
+    "size": [
+      160,
+      160
+    ],
+    "conversion": "Pillow decode RGBA; no resizing or redrawing"
+  },
+  {
+    "asset": "default-notification.png",
+    "source": "C:\\Users\\AlixHady\\Documents\\Codex\\2026-10-14\\for-more-previous-findings-extracted-binary\\outputs\\shell-sequence-recovery\\notification-assets\\tex_default_icon_notification_src.dds",
+    "sourceSha256": "3f051d69919c9683f218390a0a6e944df083c428defc813dfad96f444ee4b376",
+    "size": [
+      160,
+      160
+    ],
+    "conversion": "Pillow decode RGBA; no resizing or redrawing"
+  },
+  {
+    "asset": "default-download.png",
+    "source": "C:\\Users\\AlixHady\\Documents\\Codex\\2026-10-14\\for-more-previous-findings-extracted-binary\\outputs\\shell-sequence-recovery\\notification-assets\\tex_default_icon_download_src.dds",
+    "sourceSha256": "3ffee8e7d6a0a8c68f71d1d96f38bd1a2c9cd4dd625950ac83e83c5b5b047fb5",
+    "size": [
+      160,
+      160
+    ],
+    "conversion": "Pillow decode RGBA; no resizing or redrawing"
+  },
+  {
+    "asset": "default-upload.png",
+    "source": "C:\\Users\\AlixHady\\Documents\\Codex\\2026-10-14\\for-more-previous-findings-extracted-binary\\outputs\\shell-sequence-recovery\\notification-assets\\tex_default_icon_upload_16_9_src.dds",
+    "sourceSha256": "7a9b0e4fd5aa46232c237e3ec8a9bd7728002d7f2eebe5aa88b1f2e1afef50f5",
+    "size": [
+      284,
+      160
+    ],
+    "conversion": "Pillow decode RGBA; no resizing or redrawing"
+  },
+  {
+    "asset": "system.png",
+    "source": "C:\\Users\\AlixHady\\Documents\\Codex\\2026-10-14\\for-more-previous-findings-extracted-binary\\outputs\\interface-audit\\resources\\Sce.Vsh.ShellUI.NotificationList\\tex_icon_system_src.dds",
+    "sourceSha256": "e0f98d6e9d7c6ecfc882ff56e88ce4a596b2ea2949b161e8d4d634a2cfcb8793",
+    "size": [
+      160,
+      160
+    ],
+    "conversion": "Pillow decode RGBA; no resizing or redrawing"
+  },
+  {
+    "asset": "message.png",
+    "source": "C:\\Users\\AlixHady\\Documents\\Codex\\2026-10-14\\for-more-previous-findings-extracted-binary\\outputs\\interface-audit\\resources\\Sce.Vsh.ShellUI.NotificationList\\tex_hnt11_chat_src.png",
+    "sourceSha256": "c80d7e820421604ef716458b4b63d579ef65b7bcc69c77ec1b8a381f5f2f5a42",
+    "size": [
+      80,
+      80
+    ],
+    "conversion": "Pillow decode RGBA; no resizing or redrawing"
+  }
+]

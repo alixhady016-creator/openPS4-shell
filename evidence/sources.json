@@ -1,0 +1,10 @@
+[
+  {
+    "source": "work/dashboard-managed-600/app.exe",
+    "sha256": "86a08160a9214ea5b6bf445dc65de2072345b8889f9142145b1d529fd8dec34c"
+  },
+  {
+    "source": "work/row-trace-dependencies/PUI.dll",
+    "sha256": "32d3e56b36ab024f4e78cb2a316c30431870c111eb6b33dae815ab5cc16838a9"
+  }
+]

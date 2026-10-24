@@ -1,0 +1,11 @@
+/* Chart/ChartItem UIBL and managed code recovered 2026-10-22. No guessed glow. */
+.systemStorageChart{height:40px;width:1190px;position:relative;box-sizing:border-box;border-style:solid;border-width:0;border-image:url('assets/system-storage/tex_base_src.png') 0 3 0 3 fill / 0 3px / 0 stretch;overflow:visible}
+.systemStorageSegment{position:absolute;display:block;box-sizing:border-box;border-style:solid;border-width:0 3px;border-image-slice:0 3 0 3 fill;pointer-events:none}
+.systemStorageSegmentFocus{position:absolute;box-sizing:border-box;border-style:solid;border-width:0 17px 0 18px;border-image-slice:0 17 0 18 fill;pointer-events:none}
+.systemStorageDetailChart{position:absolute;left:300px;top:245px}
+.systemStorageDetailFree{position:absolute;left:290px;top:751px;width:1340px;height:84px;pointer-events:none}
+.interfaceListPage.systemStorageDetail .interfaceListViewport{top:375px;height:336px}
+
+
+/* Explicit Windows System Allocation row follows the four recovered PS4 categories. */
+.interfaceListPage.systemStorageDetail .interfaceListViewport{height:420px}.systemStorageDetailFree{top:835px}

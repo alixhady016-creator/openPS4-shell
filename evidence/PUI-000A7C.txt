@@ -1,0 +1,15 @@
+Sce.PlayStation.PUI.TransitionVariety+FrameFooterSlideIn::SlideInStart
+Token 0x06000A7C
+0001 ldarg.0        
+0002 brtrue.s       5
+0004 ret            
+0005 ldarg.0        
+0006 ldsfld         Sce.PlayStation.PUI.UIValues::ScreenHeight [0x040006E7]
+000B conv.r4        
+000C call           Sce.PlayStation.PUI.UI2.FrameScene::get_FooterHeight [0x06002438]
+0011 sub            
+0012 callvirt       Sce.PlayStation.PUI.UINode::set_Y [0x06000ED2]
+0017 ldarg.0        
+0018 ldc.r4         1.0
+001D callvirt       Sce.PlayStation.PUI.UINode::set_Opacity [0x06000EDA]
+0022 ret            

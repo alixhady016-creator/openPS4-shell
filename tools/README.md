@@ -1,0 +1,3 @@
+These are snapshots of the offline asset/shader preparation scripts from the research workspace. Run them from `C:/Users/AlixHady/Documents/Codex/2026-10-10/ple` with its existing Python analysis libraries and recovered outputs. They are not runtime dependencies and are not needed for an ordinary openPS4 build. The prepared assets and shader are already included under `openPS4/Shell`.
+
+`compile_wave_glsl.py` translates the previously decoded arithmetic and preserves native instruction-address comments for audit. It does not execute Sony code. `prepare_shell_assets.py` packages mesh, poses, ramps and artwork. `inspect_shell_media.py` decodes the local main BGM and extracts real-video comparison frames. Resource provenance is recorded in `Shell/assets/provenance.json`.

@@ -1,0 +1,55 @@
+Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::OnIconFocusOut
+Token 0x060033C7; RVA 0xDFA50; parameters: 
+000C  ldarg.0        
+000D  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_anim [0x040022AC]
+0012  brfalse.s      31
+0014  ldarg.0        
+0015  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_anim [0x040022AC]
+001A  callvirt       Sce.PlayStation.PUI.AnimationBlock::Cancel [0x0A0005FA]
+001F  ldsfld         Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_glowTimer [0x040022B1]
+0024  brfalse.s      54
+0026  ldsfld         Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_glowTimer [0x040022B1]
+002B  callvirt       Sce.PlayStation.PUI.FrameTask::Stop [0x0A00047E]
+0030  ldnull         
+0031  stsfld         Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_glowTimer [0x040022B1]
+0036  ldsfld         Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_glowAnim [0x040022B0]
+003B  brfalse.s      77
+003D  ldsfld         Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_glowAnim [0x040022B0]
+0042  callvirt       Sce.PlayStation.PUI.AnimationBlock::Cancel [0x0A0005FA]
+0047  ldnull         
+0048  stsfld         Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_glowAnim [0x040022B0]
+004D  ldsfld         Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_glowImage [0x040022AE]
+0052  brfalse.s      110
+0054  ldsfld         Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_glowImage [0x040022AE]
+0059  ldc.r4         0.0
+005E  callvirt       Sce.PlayStation.PUI.UINode::set_Opacity [0x0A0000F9]
+0063  ldsfld         Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_glowImage [0x040022AE]
+0068  ldnull         
+0069  callvirt       Sce.PlayStation.PUI.UI2.ImageBox::set_Image [0x0A00058D]
+006E  ldarg.0        
+006F  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_iconImage [0x040022A3]
+0074  brfalse.s      145
+0076  ldarg.0        
+0077  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_iconImage [0x040022A3]
+007C  callvirt       Sce.PlayStation.PUI.UI2.ImageBox::get_Effect [0x0A00114B]
+0081  isinst         Sce.PlayStation.PUI.UI2.FunctionFocusImageEffect [0x01000453]
+0086  stloc.0        
+0087  ldloc.0        
+0088  brfalse.s      145
+008A  ldloc.0        
+008B  ldnull         
+008C  callvirt       Sce.PlayStation.PUI.UI2.FunctionFocusImageEffect::set_AlphaMapImage [0x0A00114C]
+0091  ldarg.0        
+0092  ldc.r4         0.20000000298023224
+0097  ldc.r4         0.0
+009C  call           Sce.PlayStation.PUI.AnimationCurve::get_EaseInOutCubic [0x0A00079D]
+00A1  newobj         Sce.PlayStation.PUI.AnimationOption::.ctor [0x0A0000FA]
+00A6  ldarg.0        
+00A7  ldftn          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::<OnIconFocusOut>b__52_0 [0x060033DA]
+00AD  newobj         .AnimationStart::.ctor [0x0A0000FB]
+00B2  ldarg.0        
+00B3  ldftn          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::<OnIconFocusOut>b__52_1 [0x060033DB]
+00B9  newobj         .AnimationFinished::.ctor [0x0A0000FC]
+00BE  call           Sce.PlayStation.PUI.AnimationBlock::Start [0x0A0000FD]
+00C3  stfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_anim [0x040022AC]
+00C8  ret            

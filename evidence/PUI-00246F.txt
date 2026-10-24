@@ -1,0 +1,75 @@
+Sce.PlayStation.PUI.UI2.FrameScene+FooterDisplayController::Update
+Token 0x0600246F
+000C ldarg.0        
+000D ldarg.1        
+000E call           Sce.PlayStation.PUI.UI2.FrameScene+FooterDisplayController::UpdateAuto [0x0600246C]
+0013 stloc.0        
+0014 ldloc.0        
+0015 brfalse.s      45
+0017 ldarg.0        
+0018 call           Sce.PlayStation.PUI.UI2.FrameScene+FooterDisplayController::IsAuto [0x0600246B]
+001D brfalse.s      39
+001F ldarg.0        
+0020 call           Sce.PlayStation.PUI.UI2.FrameScene+FooterDisplayController::HideAndShowLater [0x06002467]
+0025 br.s           45
+0027 ldarg.0        
+0028 call           Sce.PlayStation.PUI.UI2.FrameScene+FooterDisplayController::ShowPermanently [0x06002468]
+002D ldarg.0        
+002E call           Sce.PlayStation.PUI.UI2.FrameScene+FooterDisplayController::IsAuto [0x0600246B]
+0033 brfalse.s      172
+0035 ldarg.0        
+0036 ldfld          Sce.PlayStation.PUI.UI2.FrameScene+FooterDisplayController::focused [0x0400177E]
+003B call           Sce.PlayStation.PUI.FocusManager::get_Instance [0x06000ACE]
+0040 callvirt       Sce.PlayStation.PUI.FocusManager::get_FocusedWidget [0x06000AE2]
+0045 ceq            
+0047 ldc.i4.0       
+0048 ceq            
+004A stloc.1        
+004B ldarg.0        
+004C call           Sce.PlayStation.PUI.FocusManager::get_Instance [0x06000ACE]
+0051 callvirt       Sce.PlayStation.PUI.FocusManager::get_FocusedWidget [0x06000AE2]
+0056 isinst         Sce.PlayStation.PUI.UI2.Widget [0x02000447]
+005B stfld          Sce.PlayStation.PUI.UI2.FrameScene+FooterDisplayController::focused [0x0400177E]
+0060 ldarg.0        
+0061 ldfld          Sce.PlayStation.PUI.UI2.FrameScene+FooterDisplayController::frameScene [0x0400177A]
+0066 ldfld          Sce.PlayStation.PUI.UI2.FrameScene::footerPanel [0x04001770]
+006B callvirt       Sce.PlayStation.PUI.UI2.FrameFooterPanel::IsBackgroundVisible [0x06002C23]
+0070 stloc.2        
+0071 ldarg.0        
+0072 ldfld          Sce.PlayStation.PUI.UI2.FrameScene+FooterDisplayController::isBackgroundVisible [0x0400177F]
+0077 ldc.i4.0       
+0078 ceq            
+007A ldloc.2        
+007B and            
+007C stloc.3        
+007D ldarg.0        
+007E ldloc.2        
+007F stfld          Sce.PlayStation.PUI.UI2.FrameScene+FooterDisplayController::isBackgroundVisible [0x0400177F]
+0084 call           Sce.PlayStation.PUI.UI2.FrameScene+FooterDisplayController::IsTouched [0x0600246E]
+0089 ldloc.1        
+008A or             
+008B ldloc.3        
+008C or             
+008D brfalse.s      149
+008F ldarg.0        
+0090 call           Sce.PlayStation.PUI.UI2.FrameScene+FooterDisplayController::HideAndShowLater [0x06002467]
+0095 ldarg.0        
+0096 ldfld          Sce.PlayStation.PUI.UI2.FrameScene+FooterDisplayController::isBackgroundVisible [0x0400177F]
+009B brfalse.s      166
+009D ldarg.0        
+009E ldarg.1        
+009F call           Sce.PlayStation.PUI.UI2.FrameScene+FooterDisplayController::IsFooterActive [0x0600246D]
+00A4 brtrue.s       172
+00A6 ldarg.0        
+00A7 call           Sce.PlayStation.PUI.UI2.FrameScene+FooterDisplayController::HidePermanently [0x06002469]
+00AC ldarg.1        
+00AD brfalse.s      191
+00AF ldarg.1        
+00B0 callvirt       Sce.PlayStation.PUI.UINode::get_IsInitial [0x06000EE9]
+00B5 brfalse.s      191
+00B7 ldarg.1        
+00B8 callvirt       Sce.PlayStation.PUI.UINode::get_IsFinallyHidden [0x06000EEF]
+00BD brtrue.s       197
+00BF ldarg.0        
+00C0 call           Sce.PlayStation.PUI.UI2.FrameScene+FooterDisplayController::UpdateState [0x06002471]
+00C5 ret            

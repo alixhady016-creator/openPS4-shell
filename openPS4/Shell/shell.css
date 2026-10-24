@@ -1,0 +1,105 @@
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#000;color:white;font-family:'Segoe UI',sans-serif;font-weight:300}button{font:inherit;color:inherit;cursor:pointer}#viewport{position:absolute;width:100%;height:100%;overflow:hidden;background:#03166d}#wave{position:absolute;width:100%;height:100%}#stage{position:absolute;width:1920px;height:1080px;transform-origin:0 0;overflow:hidden}.screen{position:absolute;inset:0}.hidden{display:none!important}#health{display:flex;align-items:center;justify-content:center;font-size:30px}#health p{opacity:0}.brand{position:absolute;left:115px;top:65px;width:440px;height:auto}.welcomeText{position:absolute;top:454px;text-align:center;width:100%}h1{font-size:36px;font-weight:300;margin:0 0 30px}p{font-size:28px}.psbutton{width:40px;height:40px;vertical-align:middle}.welcomeText small{font-size:18px;opacity:.5;display:block;margin-top:35px}.profileHeading{position:absolute;top:242px;left:600px;font-size:30px;line-height:1.6}.profiles{position:absolute;top:428px;left:560px;display:flex;gap:38px}.profiles button{width:262px;height:390px;background:#1254ba66;border:3px solid transparent;padding:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;font-size:25px}.profiles button img{width:235px;height:235px;object-fit:contain}.profiles button.selected{border-color:white;box-shadow:0 0 12px #fff6;background:#226bda66}#clock{position:absolute;right:100px;top:43px;font-size:30px}#profileBadge{position:absolute;left:940px;top:48px;font-size:27px}#functions{position:absolute;inset:0;pointer-events:none}.function{position:absolute;width:128px;height:128px;transform-origin:center;display:flex;align-items:center;justify-content:center}.function img{width:128px;height:128px;object-fit:contain}#functionLabel{position:absolute;top:844px;left:0;width:1920px;text-align:center;font-size:24px;opacity:0}#games{position:absolute;inset:0;transform-origin:0 0}.tile{position:absolute;top:238px;width:200px;height:200px;background:#07318b;transform-origin:0 0;overflow:hidden}.tile img{width:100%;height:100%;object-fit:cover}.tile.store{background:linear-gradient(140deg,#30d2ff,#006cda)}.tile.store img{width:60%;height:66%;margin:13% 20%;object-fit:contain}.tile.utility img{padding:32px;object-fit:contain}.tile .caption{position:absolute;bottom:10px;left:0;width:100%;text-align:center;font-size:18px;text-shadow:0 1px 3px #000}#highlight{position:absolute;left:280px;top:236px;width:334px;height:404px;border:3px solid #fff;box-shadow:0 0 9px #d8efff80,inset 0 0 5px #fff4;pointer-events:none}#start{position:absolute;left:282px;top:568px;width:330px;height:68px;text-align:center;padding-top:13px;background:#0878cf99;font-size:30px}#title{position:absolute;left:630px;top:567px;font-size:44px;white-space:nowrap;text-shadow:0 1px 2px #153577}footer{position:absolute;left:100px;right:100px;bottom:38px;border-top:1px solid #ffffff24;padding-top:15px;font-size:22px;display:flex;justify-content:space-between}#loader{position:absolute;left:890px;top:805px;display:flex;gap:6px}#loader i{display:block;width:28px;height:28px;background-image:url('assets/symbols.png');background-size:112px 28px;animation:busy 1.2s ease-in-out infinite}#loader i:nth-child(2){background-position:-28px;animation-delay:.12s}#loader i:nth-child(3){background-position:-56px;animation-delay:.24s}#loader i:nth-child(4){background-position:-84px;animation-delay:.36s}@keyframes busy{0%,100%{transform:translateY(0) scale(.65);opacity:.35}50%{transform:translateY(-8px) scale(1);opacity:1}}#dialog{position:absolute;left:430px;top:290px;width:1060px;padding:50px;background:#073b87f5;box-shadow:0 15px 80px #0008;text-align:center;border-top:2px solid #ffffff55}#dialog h2{font-size:36px;font-weight:300}#dialog p{font-size:27px;line-height:1.5}#dialog button,#tuner button{background:#087bcb;border:2px solid white;padding:10px 70px;font-size:26px}#error{position:absolute;inset:100px;background:#102441;padding:40px;font-size:26px;white-space:pre-wrap}#tuner{position:absolute;right:70px;top:120px;width:600px;padding:30px;background:#071d3ff2;z-index:9;font-size:24px}#tuner h2{font-weight:300}#tuner label{display:block;margin:25px 0}#tuner input{width:100%}#tuner button{padding:8px 25px;margin-right:20px}
+
+/* Each outline belongs to its tile: outgoing focus never crosses a gap. */
+#highlight,#start{display:none}.tile{overflow:visible;background:linear-gradient(#082a9a,#020e56)}.tile>img{display:block}.tile.utility img{padding:0;object-fit:cover}.tile.store{background:linear-gradient(#006ad1,#003589)}.tile.store>img{position:absolute;width:100%;height:100%;left:0;top:0;margin:0;object-fit:fill}.tile .caption{bottom:10%;font-size:calc(var(--tile-size)*.18);text-shadow:none}.tileOutline{position:absolute;inset:-2px;border:3px solid #fff;box-shadow:0 0 5px #d8efff60;pointer-events:none}.tileStart{position:absolute;top:100%;height:68px;width:100%;background:#0656c5cc;text-align:center;padding-top:14px;font-size:28px;pointer-events:none}.tileStart img{height:34px;width:34px;object-fit:contain;padding:0;display:inline-block}#hints img{width:48px;height:26px;object-fit:contain;vertical-align:middle}
+
+#functionLabel{transition:left 180ms ease-out}#hints img{width:auto;height:28px} .tile.utility>img[src$="music.png"]{padding:32px}
+
+/* PUI footer: 136/1080 height, 106px left inset, 40px baseline. */
+#health{background:#000}footer{left:0;right:0;bottom:0;height:136px;padding:12px 106px 0;border-top:1px solid #ffffff40;background:rgba(14,48,139,.64);font-size:26px;align-items:flex-start;opacity:0}.footerProfile{display:flex;align-items:center;gap:15px;min-width:390px}.footerProfile img{width:40px;height:40px}.functionCaption{position:absolute;top:146px;left:50%;transform:translateX(-50%);font-size:26px;white-space:nowrap;text-align:center}#title{text-shadow:none}.tile:has(>img[src$="whatsnew.png"]){background:#0757c5}.tile>img[src$="whatsnew.png"]{opacity:.88}#functionLabel{display:none}
+
+/* Original Store icon is a complete tile; Start strips use the requested 10% white fill. */
+.tileStart{background:rgba(255,255,255,.1)}
+.tile:has(>img[src$="whatsnew.png"]) .tileStart{background:transparent}
+.tile:has(>img[src$="whatsnew.png"]){background:transparent}
+.tile>img[src$="whatsnew.png"]{opacity:1}
+.tile.store{background:transparent}
+footer{background:rgba(117,205,222,.13);border-top-color:rgba(178,225,244,.3)}
+
+/* Recovered contextual footer hints; material and user decoration remain pending. */
+#hints{display:flex;align-items:center;gap:24px;flex:1;min-width:0}
+.footerHint{display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.footerHint img{object-fit:contain;flex:none}
+
+/* Firmware 6.00: original SST Light, glyph dimensions, GuidePanel skin. */
+@font-face{font-family:PS4Footer;src:url('assets/PS4Footer-Light.otf') format('opentype');font-style:normal;font-weight:300;font-display:block}
+footer{padding:0;border:0;font-family:PS4Footer,sans-serif;font-weight:300;font-size:30px}
+footer[data-screen="home"]{background:rgba(4,41,141,.9490196108818054)}
+#hints{position:absolute;inset:0;display:block;width:1920px;height:136px;pointer-events:none}
+#hints canvas{display:block;width:1920px;height:136px}
+.footerProfile{position:absolute;top:12px;right:106px}
+
+/* Firmware 6.00 logical layout, PUI camera and account geometry. */
+html,body{font-family:PS4Footer,'Segoe UI',sans-serif}
+.tile{top:209px}.tileStart{height:70px}
+#title{left:635px;top:538px}
+.profiles{left:540px;top:428px;gap:40px}
+.profiles button{position:relative;width:260px;height:384px;border:0;padding:0;gap:0;display:block;background:rgba(0,0,0,.1);font-size:30px}
+.profiles button img{position:absolute;left:0;top:0;width:260px;height:260px;object-fit:cover}
+.profiles button span{position:absolute;left:20px;top:260px;width:220px;height:60px;line-height:60px;text-align:left}
+.profiles #newUser img{object-fit:contain}
+.profiles #newUser span{top:300px}
+.profiles button.selected{background:rgba(0,0,0,.1);box-shadow:none;outline:3px solid rgba(255,255,255,.8);outline-offset:2px}
+.brand{left:108px;top:54px;width:500px;height:110px;object-fit:contain}
+.welcomeText{top:0;height:1080px}
+.welcomeText h1{position:absolute;top:468px;width:100%;font-size:40px;line-height:48px;margin:0}
+.welcomeText p{position:absolute;top:557px;width:100%;font-size:33px;line-height:40px;margin:0}
+.welcomeText small{display:none}
+#clock{left:1600px;right:auto;top:71px;width:224px;height:64px;text-align:right}
+#profileBadge{top:71px}
+
+.tileOutline{display:none}#title{left:636px;top:539px}
+
+.functionCaption{top:140px;font-size:26px;line-height:30px}.function img{transform-origin:center}
+
+@font-face{font-family:PS4Medium;src:url('assets/PS4System-Medium.otf') format('opentype');font-weight:500;font-display:block}
+.profiles button.selected{outline:none;box-shadow:none}
+.profiles button span{top:266px;height:40px;line-height:40px;font-family:PS4Medium,PS4Footer,sans-serif;font-weight:500}
+.profiles #newUser span{top:266px;text-align:center}
+.profiles button span{visibility:hidden}
+
+/* Firmware corrections: profile uses default separator-only footer. */
+footer[data-screen="profiles"]{background:transparent}
+footer[data-screen="profiles"] .footerProfile{display:none}
+.tile:has(>img[data-asset="whatsnew"]) .tileStart{background:rgba(255,255,255,.1)}
+.tile:has(>img[data-asset="whatsnew"]){background:transparent}
+.tile>img.nativeTileLoading{z-index:1}
+#functions #profileBadge{position:absolute;left:98px;top:43px;max-width:344px;height:40px;line-height:40px;font-size:30px;white-space:nowrap;pointer-events:none}
+/* Actual account item panel material excludes the name band. */
+.profiles button,.profiles button.selected{background:transparent}
+.profiles #localUser>img{background:transparent}
+#functions #profileBadge{top:0;height:128px;line-height:normal}
+@font-face{font-family:PS4System;src:url('assets/PS4Footer-Light.otf') format('opentype');font-weight:300;font-display:block}
+@font-face{font-family:PS4System;src:url('assets/PS4System-Roman.otf') format('opentype');font-weight:400;font-display:block}
+@font-face{font-family:PS4System;src:url('assets/PS4System-Medium.otf') format('opentype');font-weight:500;font-display:block}
+@font-face{font-family:PS4System;src:url('assets/PS4System-Bold.otf') format('opentype');font-weight:700;font-display:block}
+html,body{font-family:PS4System,sans-serif;font-synthesis:none}
+.functionCaption{font-family:PS4System,sans-serif;font-weight:400;font-size:26px}
+
+.tileStart{font-family:PS4System,sans-serif;font-weight:300;font-size:30px;line-height:normal}
+/* Panel.ApplySkin overrides the transparent serialized root: widget1/component0. */
+.profiles button,.profiles button.selected{background:rgba(63,127,223,.2980392156862745)}
+
+/* Firmware 6.00 Panel skin and recovered text geometry; see shell-final-recovery. */
+.tile .tileStart,.tile:has(img[data-asset="whatsnew"]) .tileStart{background:rgba(63,127,223,.2980392156862745);padding-top:0}
+.tileStart img{position:absolute;width:32px;height:32px;top:20px;left:calc(50% - 16px)}
+#title{left:638px;top:545px;width:994px;height:60px;font-size:60px;line-height:60px;font-weight:300}
+#clock{font-size:33px;font-weight:300;opacity:.9}
+#health p{font-size:40px;font-weight:300;max-width:1440px}
+/* Boot text geometry from LoginMgr NoDevicePanel / UserListPanel. */
+#health{background:transparent}
+#health p{margin:0;position:absolute;inset:0;max-width:none;width:1920px;height:1080px;font-family:PS4System,sans-serif;font-size:40px;font-weight:300;display:flex;justify-content:center;align-items:center}
+#health p canvas{position:absolute;inset:0;pointer-events:none}
+#welcome .welcomeText{opacity:1;font-family:PS4System,sans-serif;font-weight:300}
+#welcome .welcomeText h1,#welcome .welcomeText p{font-weight:300;opacity:1}
+#profiles .profileHeading{position:absolute;left:96px;top:160px;width:1728px;height:250px;font-family:PS4System,sans-serif;font-size:33px;font-weight:300;line-height:48px}
+#profiles .profileHeading .connected{display:flex;gap:10px;align-items:center;justify-content:center}
+#profiles .profileHeading .connected img{width:40px;height:40px}
+#profiles .profileHeading .who{margin-left:0}
+.firmwareBootText{position:absolute;left:0;top:0;pointer-events:none}
+#welcome .welcomeText{left:0;top:0;width:1920px;height:1080px}
+
+/* PUI applies inherited alpha per primitive, rather than a CSS opacity group. */
+.tile .tileStart,.tile:has(img[data-asset="whatsnew"]) .tileStart{background:transparent;overflow:visible}
+.tileStartMaterial{position:absolute;inset:0;background:rgba(63,127,223,.2980392156862745);pointer-events:none}
+.tileStart>img,.tileStart>canvas{z-index:1}

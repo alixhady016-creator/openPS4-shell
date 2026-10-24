@@ -1,0 +1,73 @@
+{
+  "wave": {
+    "phase": 35,
+    "speed": 0.7,
+    "renderWidth": 1920,
+    "screens": {
+      "health": {
+        "saturation": 1,
+        "brightness": 1,
+        "solidMix": 0,
+        "opacity": 1,
+        "lightingGain": 1,
+        "palette": 1
+      },
+      "welcome": {
+        "saturation": 1,
+        "brightness": 1,
+        "solidMix": 0,
+        "opacity": 1,
+        "lightingGain": 1,
+        "palette": 1
+      },
+      "profiles": {
+        "saturation": 1,
+        "brightness": 1,
+        "solidMix": 0,
+        "opacity": 1,
+        "lightingGain": 1,
+        "palette": 1
+      },
+      "home": {
+        "saturation": 1,
+        "brightness": 1,
+        "solidMix": 0,
+        "opacity": 1,
+        "lightingGain": 1,
+        "palette": 2
+      },
+      "functions": {
+        "saturation": 1,
+        "brightness": 1,
+        "solidMix": 0,
+        "opacity": 1,
+        "lightingGain": 1,
+        "palette": 2
+      }
+    },
+    "paletteTransitionMilliseconds": 2000
+  },
+  "timing": {
+    "row": 340,
+    "scroll": 250,
+    "focusIn": 183,
+    "focusDelay": 50,
+    "focusOut": 180,
+    "titleOut": 100,
+    "titleIn": 320,
+    "background": 625,
+    "homeReadyDelay": 1000
+  },
+  "layout": {
+    "functionGameOffset": 740,
+    "functionIconOffset": 630
+  },
+  "audio": {
+    "login": "assets/login.mp3",
+    "main": "assets/main.wav",
+    "musicVolume": 0.9,
+    "effectVolume": 1.12,
+    "cursorCooldown": 75
+  },
+  "profile": "Player"
+}

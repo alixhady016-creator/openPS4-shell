@@ -1,0 +1,13 @@
+{
+  "store": "outputs\\PS4-original-6x-assets\\extracted\\Sce.Vsh.ShellUI.Settings.Theme\\tex_store_tile_src_4k.png",
+  "whatsnew": "outputs\\PS4-original-6x-assets\\PNG-conversions\\Sce.Vsh.ShellUI.VoiceRecognitionTutorial\\tex_NUI_tutorial_appIcon_whatsNew_src.png",
+  "down": "outputs\\PS4-original-6x-assets\\extracted\\Sce.Vsh.ShellUI.TopMenu\\tex_arrow_down_src_4k.png",
+  "library": "outputs\\PS4-original-6x-assets\\PNG-conversions\\Sce.Vsh.ShellUI.VoiceRecognitionTutorial\\tex_NUI_tutorial_appIcon_library_src.png",
+  "browser": "outputs\\PS4-original-6x-assets\\PNG-conversions\\Sce.Vsh.ShellUI.VoiceRecognitionTutorial\\tex_NUI_tutorial_appIcon_browser_src.png",
+  "gallery": "outputs\\PS4-original-6x-assets\\PNG-conversions\\Sce.Vsh.ShellUI.VoiceRecognitionTutorial\\tex_NUI_tutorial_appIcon_capture_gallery_src.png",
+  "L1": "outputs\\PS4-original-6x-assets\\extracted\\Sce.PlayStation.PUI\\emoji_L1_src_4k.png",
+  "R1": "outputs\\PS4-original-6x-assets\\extracted\\Sce.PlayStation.PUI\\emoji_R1_src_4k.png",
+  "cross": "outputs\\PS4-original-6x-assets\\extracted\\Sce.PlayStation.PUI\\emoji_cross_src_4k.png",
+  "circle": "outputs\\PS4-original-6x-assets\\extracted\\Sce.PlayStation.PUI\\emoji_circle_src_4k.png",
+  "options": "outputs\\PS4-original-6x-assets\\extracted\\Sce.PlayStation.PUI\\emoji_options_src_4k.png"
+}

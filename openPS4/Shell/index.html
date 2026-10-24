@@ -1,0 +1,13 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' https://library.orbis.local data:; connect-src 'self'; media-src 'self'; object-src 'none'">
+<title>openPS4</title><link rel="stylesheet" href="shell.css"><link rel="stylesheet" href="interface-power-library.css"></head><body>
+<main id="viewport"><canvas id="wave"></canvas><div id="stage">
+<section id="health" class="screen"><p>See important health and safety warnings in the Settings menu.</p></section>
+<section id="welcome" class="screen hidden"><img class="brand" src="assets/ps4logo.png" alt="PS4"><div class="welcomeText"><h1>Welcome Back to PlayStation</h1><p>Press the PS button to use the controller.</p><small>Enter on keyboard</small></div></section>
+<section id="profiles" class="screen hidden"><img class="brand" src="assets/ps4logo.png" alt="PS4"><div class="profileHeading"><div class="connected"><img src="assets/controller-heading.png" alt=""><span>DUALSHOCK 4 wireless controller connected.</span></div><div class="who">Who is using this controller?</div></div><div class="profiles"><button id="newUser"><img src="assets/newuser.png" alt=""><span>New User</span></button><button id="localUser" class="selected"><img src="assets/profile.png" alt=""><span id="profileName">AlixHady</span></button></div></section>
+<section id="home" class="screen hidden"><div id="clock"></div><div id="profileBadge"></div><div id="functions"></div><div id="functionLabel"></div><div id="games"><div id="tiles"></div><div id="highlight"></div><div id="start">Start</div><div id="title"></div></div></section>
+<div id="loader" class="hidden" aria-label="Loading"><i></i><i></i><i></i><i></i></div>
+<footer id="footer" class="hidden"><span id="hints"></span><span class="footerProfile"><img src="assets/profile.png" alt=""><span id="footerUser"></span></span></footer>
+<div id="dialog" class="hidden" role="dialog"><h2></h2><p></p><button>OK</button></div>
+<div id="error" class="hidden"></div><div id="tuner" class="hidden"><h2>Background settings</h2><p>Changes apply immediately. Save to keep them.</p><label>Saturation <input id="saturation" type="range" min="0.7" max="1.8" step=".01"></label><label>Brightness <input id="brightness" type="range" min=".1" max="1.5" step=".01"></label><button id="saveSettings">Save</button><button id="closeSettings">Close</button></div>
+</div></main><script type="module" src="shell.js"></script></body></html>

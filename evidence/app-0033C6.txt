@@ -1,0 +1,22 @@
+Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::OnIconFocusIn
+Token 0x060033C6; RVA 0xDF9F8; parameters: 
+000C  ldarg.0        
+000D  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_anim [0x040022AC]
+0012  brfalse.s      31
+0014  ldarg.0        
+0015  ldfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_anim [0x040022AC]
+001A  callvirt       Sce.PlayStation.PUI.AnimationBlock::Cancel [0x0A0005FA]
+001F  ldarg.0        
+0020  ldc.r4         0.25
+0025  ldc.r4         0.0
+002A  call           Sce.PlayStation.PUI.AnimationCurve::get_EaseOutCubic [0x0A0008F0]
+002F  newobj         Sce.PlayStation.PUI.AnimationOption::.ctor [0x0A0000FA]
+0034  ldarg.0        
+0035  ldftn          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::<OnIconFocusIn>b__51_0 [0x060033D8]
+003B  newobj         .AnimationStart::.ctor [0x0A0000FB]
+0040  ldarg.0        
+0041  ldftn          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::<OnIconFocusIn>b__51_1 [0x060033D9]
+0047  newobj         .AnimationFinished::.ctor [0x0A0000FC]
+004C  call           Sce.PlayStation.PUI.AnimationBlock::Start [0x0A0000FD]
+0051  stfld          Sce.Vsh.ShellUI.TopMenu.SystemAreaIconBase::m_anim [0x040022AC]
+0056  ret            

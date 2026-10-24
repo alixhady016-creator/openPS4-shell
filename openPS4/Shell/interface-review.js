@@ -1,0 +1,41 @@
+// Exercises real shell routing and returned page state; fixtures never enter production data.
+export async function interfaceReview(shell){
+ const checks=[],wait=ms=>new Promise(r=>setTimeout(r,ms)),check=(name,passed,detail)=>checks.push({name,passed,detail});
+ shell.openInterface('settings');await wait(700);
+ check('Settings opens inside the shell',shell.report().interfaceName==='settings'&&shell.interfaces.settings.report().title==='Settings',shell.interfaces.settings.report());
+ const settings=shell.interfaces.settings.element;
+ check('Settings paints only its native canvas title',getComputedStyle(settings.querySelector('h1')).visibility==='hidden'&&settings.querySelectorAll('.interfaceListHeader').length===1,{visibility:getComputedStyle(settings.querySelector('h1')).visibility,headers:settings.querySelectorAll('.interfaceListHeader').length});
+ check('Extracted Settings icons load',Array.from(settings.querySelectorAll('.interfaceListRow>img')).every(image=>image.complete&&image.naturalWidth>0),Array.from(settings.querySelectorAll('.interfaceListRow>img')).filter(image=>!image.naturalWidth).map(image=>image.src));
+ for(let i=0;i<5;i++)shell.input('ArrowDown');await wait(320);
+ const selectedSettings=shell.interfaces.settings.index,selectedRow=shell.interfaces.settings.list.children[selectedSettings],selectedItem=shell.interfaces.settings.items[selectedSettings];
+ check('Settings selected row uses its recovered description presence',selectedRow&&selectedRow.offsetHeight===shell.interfaces.settings.rowHeight(selectedItem,true),{index:selectedSettings,height:selectedRow?.offsetHeight,description:selectedItem.description||null});
+ shell.input('Escape');await wait(650);check('Settings Back restores Home',shell.report().interfaceName===null,shell.report().state);
+ shell.openInterface('notifications');await wait(700);
+ check('Notifications uses separate Downloads and Uploads summaries',shell.interfaces.notifications.element.querySelectorAll('.summary').length===2&&shell.interfaces.notifications.element.querySelector('.summary').offsetHeight===180,shell.interfaces.notifications.report());
+ shell.input('Enter');await wait(750);check('Downloads empty state opens without fabricated tasks',shell.interfaces.notifications.report().page==='downloads'&&shell.interfaces.notifications.report().downloads===0,shell.interfaces.notifications.report());
+ shell.input('Escape');await wait(650);shell.input('Escape');await wait(650);
+ shell.openInterface('library');await wait(700);shell.interfaces.library.setItems([{id:'fixture',name:'Review application',iconUrl:'assets/whatsnew.png',category:'game'}]);await wait(50);
+ const library=shell.interfaces.library.element,pageRect=library.getBoundingClientRect(),cardRect=library.querySelector('.plLibraryCard').getBoundingClientRect(),pageScale=pageRect.width/1920;
+ const cardPosition={x:(cardRect.left-pageRect.left)/pageScale,y:(cardRect.top-pageRect.top)/pageScale};
+ check('Library centered scale preserves collapsed grid anchor',Math.abs(cardPosition.x-590)<1&&Math.abs(cardPosition.y-250)<1,cardPosition);
+ shell.input('ArrowRight');await wait(350);
+ check('Library transfers sidebar focus into local grid',shell.interfaces.library.report().area==='grid'&&Math.abs(shell.interfaces.library.report().pose.scale-1)<.001,shell.interfaces.library.report());
+ shell.input('Escape');await wait(350);shell.input('Escape');shell.input('Escape');await wait(650);shell.interfaces.library.setItems([]);
+ check('Library Back restores Home',shell.report().interfaceName===null,shell.report().interfaceName);
+ shell.openInterface('power');await wait(700);shell.input('ArrowUp');shell.input('ArrowUp');
+ check('Power footer remains visible with native prompts',getComputedStyle(shell.interfaces.power.element.querySelector('footer')).opacity==='1'&&!!shell.interfaces.power.element.querySelector('footer canvas'),shell.interfaces.power.report());
+ check('Power navigation skips separator',shell.interfaces.power.report().selected===0,shell.interfaces.power.report());
+ shell.input('Escape');await wait(650);
+ const start=performance.now();let taskStarted=0;const operation=shell.interfaces.wait.run(()=>{taskStarted=performance.now();});await wait(750);shell.interfaces.wait.key('Escape');
+ check('Please wait cannot be dismissed with Back',shell.interfaces.wait.report().active,shell.interfaces.wait.report());await operation;
+ check('Please wait begins job after shown and holds at least two seconds',taskStarted-start>=500&&performance.now()-taskStarted>=2000,{shownDelay:taskStarted-start,total:performance.now()-start});
+ shell.show('welcome');const logo=shell.sharedLogo.root;const old=shell.report().soundCount;shell.input('PS');
+ check('PS confirmation uses Home up sound',shell.report().soundCount===old+1&&shell.report().soundEvents.at(-1)?.file==='up.wav',shell.report().soundEvents.at(-1));
+ check('Welcome and profiles retain the same single logo',shell.sharedLogo.root===logo&&shell.sharedLogo.report().instances===1,shell.sharedLogo.report());
+ shell.input('ArrowLeft');check('Profile switch uses move sound',shell.report().soundEvents.at(-1)?.file==='move.wav',shell.report().soundEvents.at(-1));
+ const count=shell.report().soundCount;shell.input('ArrowLeft');check('Profile boundary does not repeat switch sound',shell.report().soundCount===count,shell.report().soundCount);shell.input('ArrowRight');await wait(750);shell.input('Enter');
+ check('Profile confirmation uses Home up sound',shell.report().soundEvents.at(-1)?.file==='up.wav',shell.report().soundEvents.at(-1));await wait(3500);
+ const prepared=shell.report().bootEvents.find(e=>e.event==='prepared');check('Home prepares camera before revealing rows',!!prepared&&prepared.gameTransform.includes('scale'),prepared);
+ check('No runtime errors after interface and boot flows',shell.report().errors.length===0,shell.report().errors);
+ return checks;
+}
