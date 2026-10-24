@@ -2,7 +2,7 @@
 
 **A vibe-coded, reverse-engineered PS4-style shell for Windows, built toward pixel-perfect visual and behavioral fidelity.**
 
-openPS4 is the PS4 reconstruction developed by **alixhady016-creator** on top of **OrbisPro by SvenGDK**. It recreates the console shell experience—boot, Home, function row, local profiles, Settings, storage, notifications and Quick Menu—while connecting usable controls to Windows.
+openPS4 is the PS4 reconstruction developed by **alixhady016-creator**. It recreates the console shell experience—boot, Home, function row, local profiles, Settings, storage, notifications and Quick Menu—while connecting usable controls to Windows.
 
 “Vibe-coded” describes the development process: the project was built iteratively with OpenAI Codex, natural-language direction, screenshots, reference footage, binary investigation and repeated user feedback. The intent is to reproduce the original interface rather than invent a new dashboard that merely looks similar.
 
@@ -109,27 +109,9 @@ For an existing complete dependency bundle:
 
 You can also open `openPS4.sln` in Visual Studio and set the MSBuild property `openPS4RuntimePath` to the dependency directory. Native media/emulator features may require their own runtime components and configuration; those are not supplied by this source upload. The publishing copy has been compiled with the existing local dependency bundle; a clean-machine setup has not been certified.
 
-## Controls
-
-- Arrow keys / controller directional input: navigate.
-- Enter / Cross: select; Escape / Circle: back.
-- Home/End on the keyboard or L1/R1: jump to the ends of the Home tile row.
-- **Hold the Windows key or controller PS/Home button** to toggle Quick Menu. The current 600ms threshold is a provisional adapter value, not a recovered native threshold.
-
-Actual controller delivery depends on Windows, driver and mapping behavior. Scripted input tests do not substitute for physical button testing.
-
 ## Current fidelity and limitations
 
 The project is actively refined from binary findings and direct feedback. Known gaps include parts of native text glow, some inner social-panel layout details, unavailable PSN services, and unported theme/VR/accessibility variants. Some controls are local adaptations or previews. See [Quick Menu customization](docs/recovery/quick-menu-customization.md), [animation recovery](docs/recovery/quick-menu-animation-recovery.md), and [theme recovery](docs/recovery/quick-menu-theme-recovery.md).
 
-Historical investigation documents reflect the state when written; later correction reports supersede earlier assumptions. Passing compilation and scripted checks proves neither a universal native match nor complete functionality.
-
-## Credits and asset provenance
-
-- **alixhady016-creator**: project direction, reference capture, feedback and this reconstruction.
-- **SvenGDK / OrbisPro**: original Windows application foundation; upstream source attribution is retained.
-- **OpenAI Codex**: AI-assisted implementation, investigation and iterative debugging.
-- **REA and the analysis tools**: artifact investigation and evidence-guided recovery workflow.
-- **Sony Interactive Entertainment and other respective rights holders**: PlayStation names, interface artwork, fonts, sounds and third-party character imagery.
-
-This is an independent fan/research project, not an official Sony product. Included third-party material retains its original ownership; this repository does not assign a blanket license to that material. No new license is imposed on the upstream project by this publication.
+## Disclaimer:
+This project has no association with Sony interactive. PS4 trademark, and Orbis assets remains to the respective owners
