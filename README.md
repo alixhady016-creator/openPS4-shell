@@ -4,10 +4,6 @@
 
 openPS4 is the PS4 reconstruction developed by **alixhady016-creator**. It recreates the console shell experience—boot, Home, function row, local profiles, Settings, storage, notifications and Quick Menu—while connecting usable controls to Windows.
 
-“Vibe-coded” describes the development process: the project was built iteratively with OpenAI Codex, natural-language direction, screenshots, reference footage, binary investigation and repeated user feedback. The intent is to reproduce the original interface rather than invent a new dashboard that merely looks similar.
-
-**Pixel-perfect is the goal, not a claim that every screen is already exact.** Some dimensions, colors, easing curves, assets and state transitions are recovered directly from PS4 binaries. Others are footage-derived reconstructions or Windows adaptations. Remaining differences are documented instead of being presented as recovered native behavior.
-
 ## What it does
 
 - PS4-style welcome, login and Home presentation with an animated wave background.
