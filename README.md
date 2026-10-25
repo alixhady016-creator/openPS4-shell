@@ -110,4 +110,4 @@ You can also open `openPS4.sln` in Visual Studio and set the MSBuild property `o
 The project is actively refined from binary findings and direct feedback. Known gaps include parts of native text glow, some inner social-panel layout details, unavailable PSN services, and unported theme/VR/accessibility variants. Some controls are local adaptations or previews. See [Quick Menu customization](docs/recovery/quick-menu-customization.md), [animation recovery](docs/recovery/quick-menu-animation-recovery.md), and [theme recovery](docs/recovery/quick-menu-theme-recovery.md).
 
 ## Disclaimer:
-This project has no association with Sony interactive. Playstation 4 trademark, and Orbis assets remains to the respective owners
+This project is PS4-inspired and has no association with Sony Interactive. All UI resources are completely generated and do not use any proprietary code or UI elements. All PlayStation 4 trademarks and Orbis assets remain the property of their respective owners.
